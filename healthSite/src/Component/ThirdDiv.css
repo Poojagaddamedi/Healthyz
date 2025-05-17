@@ -1,0 +1,63 @@
+.salad-img {
+    width: 100%; /* Match the container width */
+    height: 250px; /* Increased height from 250px to fit larger display */
+    object-fit: cover; /* Ensure the image scales properly */
+    display: block;
+  }
+  
+  .about-section {
+    position: relative;
+  }
+  
+  .know-more-btn {
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+    padding: 0.75rem 2rem; /* Increased padding for larger button */
+    font-size: 1.25rem; /* Increased font size from 1rem */
+  }
+  
+  .know-more-btn:hover {
+    background-color: #218838 !important;
+    border-color: #1e7e34 !important;
+  }
+  
+  h2 {
+    font-size: 2rem; /* Increased from 1.5rem */
+    font-weight: bold;
+  }
+  
+  p {
+    font-size: 1.25rem; /* Increased from 1rem */
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Styles for the doctor image */
+  .doctor-overlay {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10; /* Ensure it appears above other elements */
+  }
+  
+  .doctor-container {
+    position: relative;
+    width: 500px; /* Increased from 400px */
+  }
+  
+  .doctor-img {
+    width: 100%;
+    height: 500px; /* Increased from 400px */
+    object-fit: cover; /* Ensure the image scales properly */
+  }
+  
+  .doctor-label {
+    position: absolute;
+    bottom: 15px; /* Slightly increased for larger image */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.1rem; /* Increased from 0.9rem */
+    width: 60%;
+    text-align: center;
+    padding: 0.5rem; /* Increased padding for larger label */
+  }

@@ -1,0 +1,11 @@
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonial-card {
+  scroll-snap-align: start;
+}
+
+.testimonials-container {
+  scroll-snap-type: x mandatory;
+}
