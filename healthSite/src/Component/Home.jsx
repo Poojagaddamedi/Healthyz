@@ -30,8 +30,8 @@ function HealthyzHome() {
     textShadow: "0px 2px 10px rgba(0,0,0,0.8)"
   }}
 >
- <h1 data-aos="fade-right"> Welcome To Healthyz </h1> <p className="text-white" data-aos="fade-left">- Your partner in Health</p> 
- <button data-aos="fade-left" className="btn btn-light text-dark fw-bold px-4 py-2">
+ <h1 data-aos="fade-right" data-aos-delay="1000"> Welcome To Healthyz </h1> <p className="text-white" data-aos="fade-left"  data-aos-delay="1500">- Your partner in Health</p> 
+ <button data-aos="fade-left"   data-aos-delay="2000" className="btn btn-light text-dark fw-bold px-4 py-2">
    <Link to="/services" style={{ textDecoration: 'none', color: '#004d40' }}> 
    See Services
           </Link>
@@ -42,6 +42,7 @@ function HealthyzHome() {
 <div
   className="rounded overflow-hidden"
   data-aos="fade-right"
+  data-aos-delay="500"
   style={{
     width: "30rem",
     height: "30rem",
