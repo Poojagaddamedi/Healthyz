@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
-import { Link } from 'react-router-dom'; // ✅ Import Link
+import { Link } from 'react-router-dom'; 
 
 const Footer = () => {
   return (
@@ -27,10 +27,12 @@ const Footer = () => {
         {/* Middle Section */}
         <div style={{ flex: '1 1 150px', lineHeight: '1.8', fontWeight: 'bold' }}>
           <p>About us</p>
-          <p>Services</p>
-          <p>Blog</p>
+          <Link to="/services" style={{ textDecoration: 'none', color: '#004d40' }}> 
+          Services
+          </Link>
+          <p>Blog</p>  
           <p>Courses</p>
-          <Link to="/contact" style={{ textDecoration: 'none', color: '#004d40' }}> {/* ✅ Link added */}
+          <Link to="/contact" style={{ textDecoration: 'none', color: '#004d40' }}> 
             Contact
           </Link>
         </div>

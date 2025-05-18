@@ -7,6 +7,7 @@ import Footer from './Component/Footer';
 import MainContactUsPage from './Component/MainContactUsPage';
 import Home from './Component/Home'
 import Navbar from './Component/Navbar'
+import MainServicesPage from './Component/MainServicesPage';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,8 +17,9 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} /> {/* 👈 wrapped Home correctly */}
+        <Route path="/" element={<Home />} /> 
         <Route path="/contact" element={<MainContactUsPage />} />
+        <Route path="/services" element={<MainServicesPage />} />
       </Routes>
     </Router>
     </>

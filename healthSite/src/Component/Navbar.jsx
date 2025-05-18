@@ -7,9 +7,9 @@ const Navbar = () => {
 
   return (
     <BootstrapNavbar
-      expand={false} // Disable default expand logic
+      expand={false} 
       expanded={expanded}
-      className="bg-teal-900 text-black px-4 py-3 shadow-2xl shadow-black"
+      className="bg-teal-900 text-black px-4 py-3 shadow-2xl shadow-black top-static"
       style={{ boxShadow: '0 4px 20px rgba(0, 0, 0, 0.8)' }}
     >
       <Container fluid className="flex justify-between items-center">

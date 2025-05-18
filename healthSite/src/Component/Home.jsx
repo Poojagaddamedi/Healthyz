@@ -9,6 +9,7 @@ import Testimonials from "./Testimonials";
 import Faq from "./Faq";
 import ContactUs from "./ContactUs";
 import Footer from "./Footer";
+import { Link } from 'react-router-dom'; 
 
 function HealthyzHome() {
   useEffect(() => {
@@ -31,7 +32,9 @@ function HealthyzHome() {
 >
  <h1 data-aos="fade-right"> Welcome To Healthyz </h1> <p className="text-white" data-aos="fade-left">- Your partner in Health</p> 
  <button data-aos="fade-left" className="btn btn-light text-dark fw-bold px-4 py-2">
-  See Services
+   <Link to="/services" style={{ textDecoration: 'none', color: '#004d40' }}> 
+   See Services
+          </Link>
 </button>
 </div>
 

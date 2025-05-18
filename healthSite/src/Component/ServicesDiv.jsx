@@ -49,7 +49,7 @@ const ServicesDiv = () => {
   ];
 
   return (
-    <Container className="my-5 services-container services-section">
+    <Container className="my-1 services-container services-section">
 
       <div >
         <h1 className="mt-4">Our Services</h1>
