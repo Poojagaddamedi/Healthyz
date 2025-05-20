@@ -26,23 +26,11 @@ const Faq = () => {
          <div className="contact-column">
          <div
   className="contact-card"
-  style={{
-    padding: '20px',
-    backgroundColor: '#fff',
-    borderRadius: '10px',
-    transition: 'box-shadow 0.3s ease',
-    boxShadow: '0px 0px 10px black' 
-  }}
-  onMouseEnter={(e) => {
-    e.currentTarget.style.boxShadow = '0px 0px 20px black';
-  }}
-  onMouseLeave={(e) => {
-    e.currentTarget.style.boxShadow = '0px 0px 10px black';
-  }}
 >
           <div className="faq-header">
         <h1 className="faq-main-title">FAQ</h1>
-        <p className="faq-subtitle">Frequently Asked Questions</p>
+        <p className="faq-subtitle">Frequently Asked 
+          Questions</p>
       </div>
           </div>
         </div>
@@ -68,6 +56,7 @@ const Faq = () => {
             <div style={{ display: 'flex', alignItems: 'center' }}>
               <span style={{ marginRight: '8px' }}>{index + 1}.</span>
               <span>{question}</span>
+              <br/>
             </div>
 
             {/* Icon at the end bottom right corner */}

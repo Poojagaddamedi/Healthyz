@@ -26,14 +26,16 @@ const Footer = () => {
 
         {/* Middle Section */}
         <div style={{ flex: '1 1 150px', lineHeight: '1.8', fontWeight: 'bold' }}>
-          <p>About us</p>
+        <Link to=" /about" style={{ textDecoration: 'none', color: '#004d40' }}> 
+        <p>About us</p>
+          </Link> 
           <Link to="/services" style={{ textDecoration: 'none', color: '#004d40' }}> 
-          Services
+         <p>Services</p> 
           </Link>
           <p>Blog</p>  
           <p>Courses</p>
           <Link to="/contact" style={{ textDecoration: 'none', color: '#004d40' }}> 
-            Contact
+          <p> Contact</p> 
           </Link>
         </div>
 

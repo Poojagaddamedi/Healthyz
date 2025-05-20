@@ -8,6 +8,7 @@ import MainContactUsPage from './Component/MainContactUsPage';
 import Home from './Component/Home'
 import Navbar from './Component/Navbar'
 import MainServicesPage from './Component/MainServicesPage';
+import About from './Component/About';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,8 +19,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} /> 
-        <Route path="/contact" element={<MainContactUsPage />} />
+        <Route path="/contact" element={<MainContactUsPage />} />  
         <Route path="/services" element={<MainServicesPage />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </Router>
     </>
