@@ -39,16 +39,16 @@
     transition: background 0.3s ease;
   }
   
-  .faq-list-item:hover {
+  /* .faq-list-item:hover {
     background: #f8f9fa;
-  }
+  } */
   
-  .question-number {
+  /* .question-number {
     font-size: 1.2rem;
     font-weight: 600;
     min-width: 40px;
     color: #666;
-  }
+  } */
   
   .question-text {
     font-size: 1.3rem;
@@ -58,7 +58,7 @@
   }
   
   .contact-card {
-    background: #f8f9fa;
+    /* background: #f8f9fa; */
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -89,7 +89,7 @@
   }
 
   .faq-list-item {
-    background: #f7f7f7;
+    /* background: #f7f7f7; */
     padding: 10px 12px;
     border-radius: 8px;
     font-size: 14px;

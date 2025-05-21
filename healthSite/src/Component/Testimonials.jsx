@@ -13,12 +13,14 @@ const testimonialsData = [
     bgColor: '#FF8A65',
     text: "I had an amazing consultation session with Dr. Guthaaz Shukh. Mam for my family. She took the time to really listen to our concerns, and provided recommendations for us. I felt both practical and achievable. Her knowledge and expertise were clear, but understood out what was the ability to explain complex nutrition concepts in a way that was easy to understand. Let the session feeling motivated to make healthy changes. Thank you for your genuine care and support!",
     initial: 'K',
+    dpColor : "#013529"
   },
   {
     name: 'Bharkavi Nathan',
     bgColor: '#4AC6D6',
     text: "I had struggle in reducing my weight as I had poor and at the age of 33 I was trying to conceive. That's when I met this beautiful soul through my friend. She helped me reduce weight and guided me to eat healthy diet that would help me in my journey to conceive. The most important part is she would constantly keep a check on me either by texting or calling me often to ask about my diet and check with my mental health as well. She even calls me now a day's now. I have a healthy baby by the grace of God and Dr. Guthaaz is one of the main person in this journey thanks a lot. I conceived within 8 months.",
     initial: 'B',
+    dpColor : "#6B28C3"
   }
 ];
 
@@ -41,7 +43,7 @@ const Testimonials = () => {
       className="testimonials-container py-5"
       style={{ backgroundColor: '#FFFFFF' }}
     >
-      <div className="ms-5">
+      <div className="ms-2">
         <h1 className="mt-4" style={{ 
           fontSize: '36px',
           fontWeight: 600,
@@ -79,7 +81,7 @@ const Testimonials = () => {
           onClick={() => scroll('right')}
           style={{ 
             position: 'absolute', 
-            right: '-40px', 
+            right: '-50px', 
             top: '50%', 
             transform: 'translateY(-50%)',
             width: '50px',
@@ -100,8 +102,8 @@ const Testimonials = () => {
               key={index}
               className="testimonial-card me-5 flex-shrink-0"
               style={{ 
-                width: '600px',
-                minWidth: '600px',
+                width: '500px',
+                minWidth: '550px',
                 padding: '20px 0',
               }}
             >
@@ -123,7 +125,7 @@ const Testimonials = () => {
                       fontSize: '24px',
                       fontWeight: 'bold',
                       color: '#FFFFFF',
-                      backgroundColor: '#013529'
+                      backgroundColor: testimonial.dpColor
                     }}
                   >
                     {testimonial.initial}
@@ -132,7 +134,7 @@ const Testimonials = () => {
                     <h3 className="mb-1" style={{
                       fontSize: '20px',
                       fontWeight: 600,
-                      color: '#2B2B2B'
+                      color: 'white'
                     }}>
                       {testimonial.name}
                     </h3>
@@ -145,10 +147,11 @@ const Testimonials = () => {
                     </div>
                   </div>
                 </div>
+                <hr className="border-2 border-white opacity-100" />
                 <p style={{ 
-                  lineHeight: 1.8,
+                  lineHeight: 1.5,
                   fontSize: '16px',
-                  color: '#444444',
+                  color: 'white',
                   margin: 0
                 }}>
                   {testimonial.text}

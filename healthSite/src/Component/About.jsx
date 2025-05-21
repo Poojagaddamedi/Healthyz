@@ -85,10 +85,10 @@ const About = () => {
   flexWrap: "wrap",
   justifyContent: "space-between",
   alignItems: "flex-start",
-  padding: "2rem",
   maxWidth: "1200px",
-  margin: "0 auto",
+  //  margin: "0 auto",
   gap: "2rem",
+  // padding:"0.2rem"
 }}>
 
   {/* Left Section */}
@@ -99,7 +99,8 @@ const About = () => {
   color: "#333",
   fontWeight: "500",          // Slightly bolder text
   textAlign: "justify",       // Optional: makes it cleaner
-  marginBottom: "1.5rem"
+  marginBottom: "1.5rem",
+marginLeft : "7rem"
 }}>
   <span style={{ display: "block", textIndent: "5em", marginBottom: "0.3em" }}>
     Dr. Gulnaz Shaikh's incredible 20-year journey in nutrition and dietetics is the foundation of her brand, standing as a beacon of health and wellness. Her career has been driven by a deep passion for helping individuals achieve their health goals naturally, using food as medicine.
@@ -117,12 +118,13 @@ const About = () => {
       backgroundColor: "#77D4E0",  
       padding: "1.5rem",
     }}>
-      <h2 style={{ color: "#fff", fontSize: "22px", marginBottom: "0.5rem" }}>Philosophy</h2>
+      <h2 style={{ color: "#fff", fontSize: "22px", marginBottom: "0.5rem",
+        marginLeft : "6rem" }}>Philosophy</h2>
       <p style={{
         fontSize: "14px",
         lineHeight: "1.6",
         color: "#fff",
-        margin: 0
+        marginLeft : "6rem"
       }}>
         Dr. Shaikh strongly believes in a drug-free approach to health, focusing on:<br />
         <strong>•</strong> Diet without supplements: No artificial enhancement of nutrient intake.<br />
@@ -141,7 +143,7 @@ const About = () => {
 }}>
   <div 
     style={{
-      height: "27rem",
+      height: "29rem",
       width: "100%",
       borderRadius: "20px",
       boxShadow: "0 8px 20px rgba(0, 0, 0, 0.1)",

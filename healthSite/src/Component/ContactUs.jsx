@@ -31,7 +31,7 @@ const Contact = () => {
     <div 
       className="contact-section position-relative vh-80 d-flex align-items-center justify-content-center"
       style={{ 
-        backgroundImage: 'url(https://images.unsplash.com/photo-1507525428034-b723cf961d3e)',
+        backgroundImage: 'url(contactus.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         overflow: 'hidden',
@@ -42,10 +42,10 @@ const Contact = () => {
         className="position-absolute top-50 start-50 translate-middle"
         style={{
           width: '90%',
-          maxWidth: '800px',
+          maxWidth: '600px',
           backgroundColor: 'rgba(0, 51, 34, 0.85)',
           borderRadius: '20px',
-          backdropFilter: 'blur(4px)',
+          backdropFilter: 'blur(1px)',
           padding: '40px',
           zIndex: 2
         }}
@@ -53,19 +53,19 @@ const Contact = () => {
         data-aos-duration="1000"
       >
         <div className="text-center text-white mb-4" data-aos-delay="300">
-          <h4 style={{ fontWeight: '500', marginBottom: '10px' }}>
+          <h4 style={{ fontWeight: '400', marginBottom: '16px' }}>
             Contact us
           </h4>
-          <h1 style={{ fontSize: '2rem', fontWeight: '700', marginBottom: '8px' }}>
+          <h1 style={{ fontSize: '2rem', fontWeight: '400', marginBottom: '8px' }}>
             Let’s Get In Touch
           </h1>
-          <p style={{ fontSize: '0.95rem', marginBottom: '25px' }}>
+          <p style={{ fontSize: '0.95rem', marginBottom: '25px',color:"white" }}>
             Start your healthy journey today.
           </p>
           
           {/* Schedule Call Button */}
           <button 
-            className="btn btn-light px-4 py-2 rounded-pill"
+            className="btn btn-light px-4 py-2 "
             style={{
               fontWeight: '600',
               fontSize: '0.95rem',
