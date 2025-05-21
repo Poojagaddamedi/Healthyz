@@ -49,31 +49,29 @@ const ServicesDiv = () => {
   ];
 
   return (
-    <Container className="my-1 services-container services-section">
-
-      <div >
+    <Container className="my-5 services-container services-section">
+      <div className="text-center mb-4">
         <h1 className="mt-4">Our Services</h1>
-        <p className="mb-4 fw-bold">Comprehensive Healthcare Solutions</p>
+        <p className="fw-bold">Comprehensive Healthcare Solutions</p>
       </div>
 
       <Row className="g-4">
         {services.map((service, index) => (
-          <Col key={index} md={6} lg={4} data-aos="fade-up" data-aos-delay={index % 3 * 200}>
-            <div className={`service-card h-100 shadow-lg rounded-4 overflow-hidden`}>
+          <Col key={index} xs={12} sm={12} md={6} lg={4} data-aos="fade-up" data-aos-delay={(index % 3) * 200}>
+            <div className="service-card h-100 shadow-lg rounded-4 overflow-hidden d-flex flex-column">
               <div className="card-image-container">
                 <img
                   src={service.image}
-                  className="card-img-top"
+                  className="card-img-top img-fluid"
                   alt={service.title}
+                  style={{ height: '220px', objectFit: 'cover', width: '100%' }}
                 />
                 <div className={`image-overlay bg-${service.color}`}></div>
               </div>
-              <div className="card-body p-4">
-                <h3 className={`card-title fw-bold text-${service.color}`}>
-                  {service.title}
-                </h3>
+              <div className="card-body p-4 d-flex flex-column">
+                <h3 className={`card-title fw-bold text-${service.color}`}>{service.title}</h3>
                 <hr className={`w-25 mx-auto my-4 divider-${service.color}`} />
-                <p className="card-text text-muted">{service.description}</p>
+                <p className="card-text text-muted flex-grow-1">{service.description}</p>
               </div>
             </div>
           </Col>

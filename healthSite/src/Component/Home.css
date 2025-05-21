@@ -1,0 +1,26 @@
+@media (max-width: 916px) {
+    .card-section {
+      flex-direction: column;
+    }
+    
+    .green-section, .food-section {
+      width: 100% !important;
+      height: 50% !important;
+    }
+    
+    .content-text {
+      padding: 1px !important;
+    }
+    
+    .main-title {
+      font-size: 2rem !important;
+    }
+    
+    .sub-title {
+      font-size: 1rem !important;
+    }
+    
+    .nav-button {
+      width: 80% !important;
+    }
+  }

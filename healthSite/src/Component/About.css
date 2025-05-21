@@ -1,0 +1,95 @@
+/* Mobile Responsive CSS */
+@media (max-width: 768px) {
+    .about-hero {
+      height: 250px !important;
+    }
+    
+    .hero-title {
+      font-size: 2rem !important;
+    }
+    
+    .hero-subtitle {
+      font-size: 0.9rem !important;
+    }
+  
+    .about-main-content {
+      flex-direction: column !important;
+      gap: 1rem !important;
+      padding: 0 15px !important;
+      margin-top: 1rem !important;
+    }
+  
+    .about-description {
+      margin-left: 0 !important;
+      text-indent: 0 !important;
+      padding: 0 10px !important;
+      font-size: 14px !important;
+    }
+  
+    .philosophy-box,
+    .philosophy-box h2,
+    .philosophy-box p {
+      margin-left: 0 !important;
+      padding: 1rem !important;
+    }
+  
+    .doctor-image-container {
+      width: 90% !important;
+      margin: 0 auto !important;
+      height: 300px !important;
+    }
+  
+    .qualifications-section {
+      min-width: 100% !important;
+      margin-left: 0 !important;
+      padding: 0 15px !important;
+      margin-Top : "15rem"
+    }
+    
+    .section-title {
+      font-size: 24px !important;
+      margin-left: 0 !important;
+      margin-top: 10rem;
+      /* text-align: center !important; */
+    }
+  
+    .qualifications-section ul {
+      /* padding-left: 15px !important; */
+      margin-left: 0rem;
+    }
+  
+    .qualifications-section li span:first-child {
+      margin-left: 0 !important;
+    }
+  
+    .values-section {
+      flex-direction: column !important;
+      margin-left: 0 !important;
+      padding: 0 15px !important;
+    }
+  
+    .values-image {
+      min-width: 100% !important;
+    }
+  
+    .values-image img {
+      height: 300px !important;
+    }
+  
+    .values-content {
+      padding-right: 0 !important;
+    }
+  
+    .values-content h2 {
+      font-size: 24px !important;
+      text-align: center !important;
+    }
+  
+    .values-content h3 {
+      font-size: 14px !important;
+    }
+  
+    .values-content button {
+      width: 100% !important;
+    }
+  }

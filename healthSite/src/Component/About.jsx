@@ -5,6 +5,7 @@ import Testimonials from "./Testimonials";
 import Faq from "./Faq";
 import ContactUs from "./ContactUs";
 import Footer from "./Footer";
+import './About.css';
 
 const About = () => {
   useEffect(() => {
@@ -27,81 +28,70 @@ const About = () => {
   };
   return (
     <>
-       <div
-  style={{
-    position: "relative",
-    width: "100%",
-    height: "350px",
-    backgroundImage: "url('aboutUs.png')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    display: "grid",
-    placeItems: "center",
-    textAlign: "center",
-    color: "white",
-  }}
->
-  {/* Dark Overlay */}
-  <div
-    style={{
-      position: "absolute",
-      top: 0,
-      left: 0,
-      width: "100%",
-      height: "100%",
-      backgroundColor: "rgba(0, 0, 0, 0.5)",
-      zIndex: 1,
-    }}
-  />
-  <div style={{ zIndex: 2 }}>
-    <h1
-      style={{
-        fontSize: "3rem",
-        fontWeight: "bold",
-        textShadow: "2px 2px 10px rgba(0, 0, 0, 0.6)",
-        margin: 0,
-      }}
-    >
-      About Us
-    </h1>
-    <h6
-      style={{
-        fontSize: "1rem",
-        fontWeight: "bold",
-        textShadow: "2px 2px 10px rgba(0, 0, 0, 0.6)",
-        marginTop: "0.5rem",
-      }}
-    >
-      Meet Dr. Gulnaz Shaikh (Founder)
-    </h6>
-  </div>
-</div>
+     <div className="about-hero" style={{
+        position: "relative",
+        width: "100%",
+        height: "350px",
+        backgroundImage: "url('aboutUs.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        display: "grid",
+        placeItems: "center",
+        textAlign: "center",
+        color: "white",
+      }}>
+        <div className="hero-overlay" style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          backgroundColor: "rgba(0, 0, 0, 0.5)",
+          zIndex: 1,
+        }} />
+        <div className="hero-content" style={{ zIndex: 2 }}>
+          <h1 className="hero-title" style={{
+            fontSize: "3rem",
+            fontWeight: "bold",
+            textShadow: "2px 2px 10px rgba(0, 0, 0, 0.6)",
+            margin: 0,
+          }}>
+            About Us
+          </h1>
+          <h6 className="hero-subtitle" style={{
+            fontSize: "1rem",
+            fontWeight: "bold",
+            textShadow: "2px 2px 10px rgba(0, 0, 0, 0.6)",
+            marginTop: "0.5rem",
+          }}>
+            Meet Dr. Gulnaz Shaikh (Founder)
+          </h6>
+        </div>
+      </div>
+
 
         {/* Second Portion */}
-        <div style={{
-          
-    marginTop :"3rem",
-  display: "flex",
-  flexWrap: "wrap",
-  justifyContent: "space-between",
-  alignItems: "flex-start",
-  maxWidth: "1200px",
-  //  margin: "0 auto",
-  gap: "2rem",
-  // padding:"0.2rem"
-}}>
+        <div className="about-main-content" style={{
+        marginTop: "3rem",
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "space-between",
+        alignItems: "flex-start",
+        maxWidth: "1200px",
+        gap: "2rem",
+      }}>
 
   {/* Left Section */}
-  <div style={{ flex: 1, minWidth: "300px" }}>
-  <p style={{
-  fontSize: "16px",
-  lineHeight: "1.4",
-  color: "#333",
-  fontWeight: "500",          // Slightly bolder text
-  textAlign: "justify",       // Optional: makes it cleaner
-  marginBottom: "1.5rem",
-marginLeft : "7rem"
-}}>
+  <div className="text-content" style={{ flex: 1, minWidth: "300px" }}>
+          <p className="about-description" style={{
+            fontSize: "16px",
+            lineHeight: "1.4",
+            color: "#333",
+            fontWeight: "500",
+            textAlign: "justify",
+            marginBottom: "1.5rem",
+            marginLeft: "7rem"
+          }}>
   <span style={{ display: "block", textIndent: "5em", marginBottom: "0.3em" }}>
     Dr. Gulnaz Shaikh's incredible 20-year journey in nutrition and dietetics is the foundation of her brand, standing as a beacon of health and wellness. Her career has been driven by a deep passion for helping individuals achieve their health goals naturally, using food as medicine.
   </span>
@@ -114,10 +104,10 @@ marginLeft : "7rem"
 </p>
 
 
-    <div style={{
-      backgroundColor: "#77D4E0",  
-      padding: "1.5rem",
-    }}>
+<div className="philosophy-box" style={{
+            backgroundColor: "#77D4E0",
+            padding: "1.5rem",
+          }}>
       <h2 style={{ color: "#fff", fontSize: "22px", marginBottom: "0.5rem",
         marginLeft : "6rem" }}>Philosophy</h2>
       <p style={{
@@ -136,11 +126,11 @@ marginLeft : "7rem"
   </div>
 
   {/* Right Section */}
-  <div style={{
-  flex: "0 1 350px",
-  position: "relative",
-  textAlign: "center",
-}}>
+  <div className="doctor-image-container" style={{
+          flex: "0 1 350px",
+          position: "relative",
+          textAlign: "center",
+        }}>
   <div 
     style={{
       height: "29rem",
@@ -188,14 +178,14 @@ marginLeft : "7rem"
 
       
      {/* QUALIFICATIONS & ACHIEVEMENTS */}
-     <div style={{ flex: 1, minWidth: "600px",marginTop :"2rem" }}>
-  <h2 style={{
-    fontSize: "36px",
-    fontWeight: 700,
-    color: "#2B2B2B",
-    marginBottom: "1rem",
-     marginLeft:"7rem"
-  }}>
+     <div className="qualifications-section" style={{ flex: 1, minWidth: "600px", marginTop: "2rem" }}>
+        <h2 className="section-title" style={{
+          fontSize: "36px",
+          fontWeight: 700,
+          color: "#2B2B2B",
+          marginBottom: "1rem",
+          marginLeft: "7rem"
+        }}>
     Qualifications & Achievements
   </h2>
 
@@ -255,19 +245,17 @@ marginLeft : "7rem"
 
 
         {/* Values At Healthyz */}
-<div style={{
-  display: "flex",
-  gap: "2rem",
-  maxWidth: "1200px",
-  margin: "0 auto",
-  backgroundColor: "#FFFFFF",
-  alignItems: "center",
-  marginTop : "1.8rem",
-  marginLeft : "7rem"
-}}>
-
-  {/* Left Image Section */}
-  <div style={{ flex: 1, minWidth: "400px",marginTop : "2rem" }}>
+        <div className="values-section" style={{
+        display: "flex",
+        gap: "2rem",
+        maxWidth: "1200px",
+        margin: "0 auto",
+        backgroundColor: "#FFFFFF",
+        alignItems: "center",
+        marginTop: "1.8rem",
+        marginLeft: "7rem"
+      }}>
+        <div className="values-image" style={{ flex: 1, minWidth: "400px", marginTop: "2rem" }}>
     <img 
       src="freepik__the-style-is-candid-image-photography-with-natural__79822.png"
       alt="Healthy Lifestyle"
@@ -282,7 +270,7 @@ marginLeft : "7rem"
   </div>
 
   {/* Right Content Section */}
-  <div style={{ flex: 1, paddingRight: "70px" }}>
+  <div className="values-content" style={{ flex: 1, paddingRight: "70px" }}>
     <h2 style={{
       fontSize: "36px",
       fontWeight: 700,

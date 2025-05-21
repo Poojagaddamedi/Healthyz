@@ -21,3 +21,62 @@
     transform: scale(1);
     opacity: 1;
   }
+
+  /* Add these media queries at the bottom of your ContactUs.css */
+@media (max-width: 768px) {
+  /* Mobile size reduction */
+  .contact-section {
+    min-height: 50vh;
+    padding: 30px 0 !important;
+  }
+
+  /* Mobile keyframe animation */
+  @keyframes mobileSlideIn {
+    0% {
+      transform: translateY(20%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Content container adjustments */
+  .contact-section > div {
+    width: 95% !important;
+    max-width: 400px !important;
+    padding: 25px !important;
+    animation: mobileSlideIn 0.8s ease-out;
+  }
+
+  /* Text adjustments */
+  .contact-section h4 {
+    font-size: 1.1rem !important;
+    margin-bottom: 12px !important;
+  }
+
+  .contact-section h1 {
+    font-size: 1.6rem !important;
+    margin-bottom: 6px !important;
+  }
+
+  .contact-section p {
+    font-size: 0.85rem !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* Button adjustments */
+  .contact-section button {
+    padding: 8px 20px !important;
+    font-size: 0.85rem !important;
+    transform: none !important;
+  }
+
+  /* Disable hover effects on mobile */
+  @media (hover: none) {
+    .contact-section button {
+      transform: none !important;
+    }
+  }
+}

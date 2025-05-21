@@ -60,3 +60,53 @@
   border-radius: 16px; /* optional rounded edges */
   margin-top: 40px; /* Adds top spacing */
 }
+
+@media (max-width: 768px) {
+  .flex-card-container {
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 0.7rem !important;
+  }
+
+  .flex-card {
+    width: 90% !important;
+    margin-bottom: 1.5rem;
+  }
+
+  .flex-card h1, 
+  .flex-card h2 {
+    text-align: center !important;
+    margin-left: 0 !important;
+  }
+}
+
+/* Optional: remove left margin on small devices */
+@media (max-width: 576px) {
+  .flex-title {
+    margin-left: 0 !important;
+    padding: 0 1rem;
+font-size: 0.5rem;
+  }
+  #secondName{
+    font-size: 0.3rem;
+  }
+}
+/* FlexCard.css */
+
+/* Mobile responsiveness for heading text */
+@media (max-width: 768px) {
+  #secondName {
+    font-size: 1rem !important;
+   margin-left: 1.3rem;
+  }
+
+  .flex-title h1 {
+    font-size: 1.8rem !important;
+    margin-left: 1.3rem;
+  }
+
+  .flex-title {
+    margin-left: 0 !important;
+    padding: 0 1rem;
+  }
+}

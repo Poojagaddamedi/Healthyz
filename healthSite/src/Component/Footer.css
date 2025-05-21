@@ -1,0 +1,57 @@
+/* Footer.css */
+@keyframes footerSlideUp {
+    from {
+      transform: translateY(20%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    footer {
+      animation: footerSlideUp 0.5s ease-out !important;
+    }
+  
+    footer > div:first-child {
+      /* flex-direction: column !important; */
+     gap: 15px !important; 
+      padding: 20px 15px !important; */
+    }
+  
+    footer h3 {
+      font-size: 1.4rem !important;
+      margin-bottom: 5px !important;
+    }
+  
+    footer p, footer a {
+      font-size: 0.9rem !important;
+      /* margin-bottom: 8px !important; Added for paragraph spacing */
+      /* line-height: 1.4 !important; */
+    }
+  
+    /* Address line spacing fix */
+    footer div:first-child p {
+      margin-bottom: 0 !important;
+    }
+  
+    footer > div:last-child {
+      padding: 8px 15px !important; /* Reduced padding */
+      gap: 10px !important; /* Reduced from 15px */
+    }
+  
+    .social-icons {
+      margin-top: 10px !important; /* Reduced from 15px */
+    }
+  
+    footer > div:last-child div {
+      font-size: 0.8rem !important;
+    }
+  
+    /* Reduce space between items in middle section */
+    div[style*="1 1 150px"] {
+      line-height: 1.6 !important;
+    }
+  }

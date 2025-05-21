@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaChevronDown } from 'react-icons/fa';
+import './Faq.css';
 
 const Faq = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -18,48 +19,29 @@ const Faq = () => {
   };
 
   return (
-    <div className="faq-container" style={{ 
-      maxWidth: '1100px',
-      margin: '0 auto',
-      padding: '40px 20px',
-    }}>
-      <div style={{ 
-        display: 'flex',
-        gap: '80px',
-        justifyContent: 'space-between',
-      }}>
-        {/* Left Column - FAQ Header */}
-        <div style={{ flex: 1 }}>
-          <h1 style={{ 
-            fontSize: '42px',
-            color: '#2d2d2d',
-            marginBottom: '15px',
-          }}>
-            FAQ
-          </h1>
-          <p style={{
-            fontSize: '24px',
-            color: '#555',
-            lineHeight: 1.4,
-          }}>
-            Frequently Asked<br />Questions
-          </p>
-        </div>
+    <div className="faq-container">
+    {/* Changed container to use CSS class */}
+    <div className="faq-columns">
+      {/* Left Column - FAQ Header (no changes here) */}
+      <div className="faq-header">
+        <h1 className="faq-main-title">FAQ</h1>
+        <p className="faq-subtitle">
+          Frequently Asked<br />Questions
+        </p>
+      </div>
 
         {/* Right Column - Questions */}
         <div style={{ flex: 2 }}>
+        <div className="questions-column">
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1px' }}>
             {questions.map((question, index) => (
               <div
                 key={index}
+                className="faq-list-item"
                 onClick={() => toggleQuestion(index)}
                 style={{
-                  // backgroundColor: '#f7f7f7',
-                  // borderRadius: '8px',
-                  // padding: '12px 16px',
                   cursor: 'pointer',
                   position: 'relative',
-                  // border: '1px solid #e0e0e0',
                 }}
               >
                 <div style={{ 
@@ -68,17 +50,22 @@ const Faq = () => {
                   alignItems: 'center',
                 }}>
                   <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-                    <span style={{ 
+                    <span className="question-number" style={{ 
                       color: '#666',
                       fontWeight: 'bold',
-                    }}>{index + 1}.</span>
-                    <span style={{ 
+                    }}>
+                      {index + 1}.
+                    </span>
+                    <span className="question-text" style={{ 
                       fontWeight: '600',
                       color: '#333',
                       fontSize: '16px',
-                    }}>{question}</span>
+                    }}>
+                      {question}
+                    </span>
                   </div>
                   <FaChevronDown 
+                    className="faq-icon"
                     style={{ 
                       color: '#666',
                       fontSize: '14px',
@@ -89,7 +76,7 @@ const Faq = () => {
                 </div>
 
                 {openIndex === index && (
-                  <div style={{ 
+                  <div className="faq-answer" style={{ 
                     marginTop: '12px',
                     color: 'black',
                     fontSize: '15px',
@@ -97,14 +84,14 @@ const Faq = () => {
                     paddingLeft: '24px',
                   }}>
                     This is a placeholder answer for: <em>{question}</em>
-            
                   </div>
                 )}
-                         <hr className="border border-dark"/>
+                <hr className="border border-dark" />
               </div>
             ))}
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

@@ -45,6 +45,7 @@
   width: 100%;
   max-width: 500px;
   margin-left: auto;
+  
 }
 
 .doctor-img {
@@ -71,4 +72,154 @@
   width: auto;
   text-align: center;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.about-title-mobile {
+  display: none;
+} 
+@media (max-width: 768px) {
+  .salad-img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    margin-bottom: 7rem;
+  }
+  .about-title-mobile {
+    position: absolute;
+    top: -60px;                 /* distance from the top */
+    left: 20%;                 /* center horizontally */
+    transform: translateX(-50%);
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+    padding: 8px 16px;
+    border-radius: 8px;
+    z-index: 2;
+    display: block;
+  }
+    .about-title {
+    display: none;
+  }
+  .doctor-container {
+    position: relative; /* Remove absolute for mobile */
+    display: flex;
+    justify-content: center;
+    margin-top: -5rem;
+    margin-bottom: 2rem;
+  }
+
+  .doctor-img {
+    width: 55%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-right: 28rem;
+    margin-bottom: 8rem;
+  }
+
+  .about-title {
+    font-size: 42px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    align-items: center;
+    margin-left: 3rem;
+  }
+
+  .doctor-label {
+    position: center;
+    bottom: 40px;
+    left: 10%;
+    transform: translateX(1.2em);
+    background: rgba(255, 255, 255, 0.9);
+    color: #004d40;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    width: auto;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  .know-more-btn {
+    background-color: #004d40 !important;
+    border: none !important;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    margin-left: 7rem;
+  }
+  .about-description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 25px;
+    margin-top: 3rem;
+  }
+}
+
+  /* Animation Keyframes */
+  @keyframes fadeInImage {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes slideUpAbout {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes popInDoctor {
+    0% {
+      opacity: 0;
+      transform: translateY(20px) scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes pulseButton {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  /* Assign keyframes to elements */
+  .third-div-salad {
+    animation: fadeInImage 1s ease forwards;
+  }
+
+  .third-div-about {
+    animation: slideUpAbout 1.2s ease forwards;
+  }
+
+  .third-div-doctor-img {
+    animation: popInDoctor 1.3s ease forwards;
+  }
+
+  .third-div-button {
+    animation: pulseButton 1.5s infinite ease-in-out;
+  }
 }

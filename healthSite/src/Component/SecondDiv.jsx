@@ -10,17 +10,23 @@ const FlexCard = () => {
   }, []);  
   return (
     <>
-      <div style={{ marginLeft: '8%' }}>
-        <h1 className="mt-4 text-start  ">Why Healthyz</h1>
-        <h2 className="mb-4 fw-normal text-start" style={{ fontSize: '3rem' }}>Know The Healthyz Difference With</h2>
-      </div>
+      <div className="flex-title" style={{ marginLeft: '8%' }}>
+  <h1 className="mt-4 text-start">Why Healthyz</h1>
+  <h2 className="mb-4 fw-normal text-start" id="secondName" style={{ fontSize: '3rem' }}>
+    Know The Healthyz Difference With
+  </h2>
+</div>
 
-      <div className="d-flex flex-wrap justify-content-center gap-3 p-6 bg-light marginLeft:'8%' ">
+<div className="d-flex flex-wrap justify-content-center gap-3 p-6 bg-light flex-card-container">
         {/* Card 1 */}
         <Card
-        data-aos="fade-right" 
-          style={{ width: '22rem', backgroundColor: 'rgba(74, 198, 214, 1)', borderRadius: '30px' }} // Brighter color
-          className="text-left border-0"
+        data-aos="fade-right"
+        className="text-left border-0 flex-card"
+        style={{
+          width: '22rem',
+          backgroundColor: 'rgba(74, 198, 214, 1)',
+          borderRadius: '30px'
+        }}
         >
           <Card.Body className="p-5">
             <Card.Title className="fw-bold" style={{ fontSize: '1.5rem', color: '#fff', paddingTop: '3px', textAlign: 'left' }}>Customized  Diet  Plans</Card.Title>
@@ -33,9 +39,13 @@ const FlexCard = () => {
 
         {/* Card 2 */}
         <Card
-        data-aos="fade-up" 
-          style={{ width: '22rem', backgroundColor: 'rgba(244, 143, 177, 1)', borderRadius: '30px' }} // Brighter color
-          className="text-left border-0"
+      data-aos="fade-up"
+      className="text-left border-0 flex-card"
+      style={{
+        width: '22rem',
+        backgroundColor: 'rgba(244, 143, 177, 1)',
+        borderRadius: '30px'
+      }}
         >
           <Card.Body className="p-4">
             <Card.Title className="fw-bold" style={{ fontSize: '1.5rem', color: '#fff', textAlign: 'left' }}>Natural, Side-Effect-Free Methods</Card.Title>
@@ -48,9 +58,13 @@ const FlexCard = () => {
 
         {/* Card 3 */}
         <Card
-        data-aos="fade-left" 
-          style={{ width: '22rem', backgroundColor: 'rgba(255, 138, 101, 1)', borderRadius: '30px' }} // Brighter color
-          className="text-left border-0"
+      data-aos="fade-left"
+      className="text-left border-0 flex-card"
+      style={{
+        width: '22rem',
+        backgroundColor: 'rgba(255, 138, 101, 1)',
+        borderRadius: '30px'
+      }}
         >
           <Card.Body className="p-4">
             <Card.Title className="fw-bold" style={{ fontSize: '1.5rem', color: '#fff', textAlign: 'left' }}>100% Satisfaction Guarantee</Card.Title>
