@@ -131,7 +131,6 @@ function HealthyzHome() {
   return (
     <>
       {/* LOGO */}
-      <img src="/logo192.png" alt="Healthyz Logo" style={logoStyle} />
       {/* CARD SECTION */}
       <div style={cardStyle}>
         <div style={greenStyle}></div>

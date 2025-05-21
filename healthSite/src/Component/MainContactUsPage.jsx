@@ -48,33 +48,48 @@ const MainContactUsPage = () => {
   return (
     <>
       <div
-        style={{
-          position: "relative",
-          width: "100%",
-          height: "300px",
-          backgroundImage:
-            "url('https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          filter: "sepia(0.4) contrast(0.9) brightness(0.95)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <h1
-          style={{
-            color: "white",
-            fontSize: "3rem",
-            fontWeight: "bold",
-            textShadow: "2px 2px 10px rgba(0, 0, 0, 0.6)",
-            padding: "0.5rem 1.5rem",
-            borderRadius: "10px",
-          }}
-        >
-          Contact us
-        </h1>
-      </div>
+  style={{
+    position: "relative",
+    width: "100%",
+    height: "300px",
+    backgroundImage:
+      "url('https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  }}
+>
+  {/* Dark overlay to reduce brightness */}
+  <div
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      backgroundColor: "rgba(0, 0, 0, 0.4)", // controls brightness
+      zIndex: 1,
+    }}
+  />
+
+  {/* Lightened text content */}
+  <h1
+    style={{
+      color: "white",
+      fontSize: "3rem",
+      fontWeight: "bold",
+      textShadow: "2px 2px 12px rgba(0, 0, 0, 0.8)", // makes text pop
+      padding: "0.5rem 1.5rem",
+      borderRadius: "10px",
+      zIndex: 2,
+    }}
+  >
+    Contact us
+  </h1>
+</div>
+
 
       {/* Calendly Widget Section */}
       {/* <div
@@ -119,7 +134,7 @@ const MainContactUsPage = () => {
           justifyContent:"center",
           alignItems : "center",
           margin : "3rem",
-          marginLeft:"13rem"
+          marginLeft:"17rem"
         }}
       >
         <iframe
