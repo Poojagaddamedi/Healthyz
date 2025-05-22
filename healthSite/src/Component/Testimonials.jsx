@@ -21,6 +21,13 @@ const testimonialsData = [
     text: "I had struggle in reducing my weight as I had poor and at the age of 33 I was trying to conceive. That's when I met this beautiful soul through my friend. She helped me reduce weight and guided me to eat healthy diet that would help me in my journey to conceive. The most important part is she would constantly keep a check on me either by texting or calling me often to ask about my diet and check with my mental health as well. She even calls me now a day's now. I have a healthy baby by the grace of God and Dr. Guthaaz is one of the main person in this journey thanks a lot. I conceived within 8 months.",
     initial: 'B',
     dpColor : "#6B28C3"
+  },
+  {
+    name: 'Khader Shareef',
+    bgColor: '#FF8A65',
+    text: "I had an amazing consultation session with Dr. Guthaaz Shukh. Mam for my family. She took the time to really listen to our concerns, and provided recommendations for us. I felt both practical and achievable. Her knowledge and expertise were clear, but understood out what was the ability to explain complex nutrition concepts in a way that was easy to understand. Let the session feeling motivated to make healthy changes. Thank you for your genuine care and support!",
+    initial: 'K',
+    dpColor : "#013529"
   }
 ];
 

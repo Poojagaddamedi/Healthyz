@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import './MainContactUsPage.css'
 
 const MainContactUsPage = () => {
   const [submitting, setSubmitting] = useState(false);
@@ -128,24 +129,18 @@ const MainContactUsPage = () => {
           }}
         /> */}
       {/* </div> */}
-      <div
-        style={{
-          overflow: "hidden",
-          justifyContent:"center",
-          alignItems : "center",
-          margin : "3rem",
-          marginLeft:"17rem"
-        }}
-      >
-        <iframe
-          src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FKolkata&showPrint=0&src=dmluYXlwYXRlbDg5ODk0NEBnbWFpbC5jb20&src=ZW4uaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4tZ2IuaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%230B8043&color=%230B8043"
-          style={{border:"solid 1px #777"}}
-          width="800"
-          height="600"
-          frameBorder="0"
-          scrolling="no"
-        ></iframe>
-      </div>
+      <div className="calendar-container">
+  <iframe
+    src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FKolkata&showPrint=0&src=dmluYXlwYXRlbDg5ODk0NEBnbWFpbC5jb20&src=ZW4uaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4tZ2IuaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%230B8043&color=%230B8043"
+    style={{ border: "solid 1px #777" }}
+    width="800"
+    height="600"
+    frameBorder="0"
+    scrolling="no"
+    title="Google Calendar"
+  ></iframe>
+</div>
+
     </>
   );
 };

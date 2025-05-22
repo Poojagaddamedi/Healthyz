@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect ,useState} from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Testimonials from "./Testimonials";
@@ -8,23 +8,32 @@ import Footer from "./Footer";
 import './About.css';
 
 const About = () => {
-  useEffect(() => {
+  const [isMobile, setIsMobile] = useState(false);
 
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://assets.calendly.com/assets/external/widget.js';
     script.async = true;
     document.head.appendChild(script);
 
-    return () => {
-      document.head.removeChild(script);
-    };
+    return () => document.head.removeChild(script);
   }, []);
 
   const handleScheduleClick = (e) => {
     e.preventDefault();
-    window.Calendly.initPopupWidget({
-      url: 'https://calendly.com/vinaypatel898944'
-    });
+    if (!isMobile) {
+      window.Calendly.initPopupWidget({
+        url: 'https://calendly.com/vinaypatel898944',
+      });
+    }
   };
   return (
     <>
@@ -137,7 +146,7 @@ const About = () => {
       width: "100%",
       borderRadius: "20px",
       boxShadow: "0 8px 20px rgba(0, 0, 0, 0.1)",
-      backgroundImage: "url('ThirdDivDocter.jpg')",
+      backgroundImage: "url('GulnazSheikh.jpg')",
       backgroundSize: "cover",
       backgroundPosition: "center 20%",
       backgroundRepeat: "no-repeat",
@@ -148,7 +157,7 @@ const About = () => {
     aria-label="Dr. Gulnaaz Shaikh"
   >
       {/* Blue Shadow at Bottom */}
-  <div style={{
+  {/* <div style={{
     position: "absolute",
     bottom: "0",
     width: "100%",
@@ -157,9 +166,9 @@ const About = () => {
     borderBottomLeftRadius: "20px",
     borderBottomRightRadius: "20px",
     pointerEvents: "none"
-  }}></div>
+  }}></div> */}
 
-  {/* Label Text */}
+  {/* Label Text
   <div style={{
     position: "absolute",
     bottom: "0.5rem",
@@ -171,7 +180,7 @@ const About = () => {
     textShadow: "1px 1px 4px rgba(0,0,0,0.6)",
   }}>
     Dr. Gulnaaz Shaikh (Founder)
-  </div>
+  </div> */}
   </div>
 </div>
 </div>
@@ -323,22 +332,36 @@ const About = () => {
       ))}
     </div>
 
-    <button 
-              className="btn btn-light my-3 px-4 py-2 "
-              style={{
-                fontWeight: '600',
-                fontSize: '0.95rem',
-                boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-                transition: 'transform 0.3s ease',
-                backgroundColor : "#013529",
-                color : "white"
-              }}
-              onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-              onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
-              onClick={handleScheduleClick}
-            >
-              Schedule Call
-            </button>
+    <div>
+      {!isMobile && (
+        <button
+          className="btn btn-light my-3 px-4 py-2"
+          style={{
+            fontWeight: '600',
+            fontSize: '0.95rem',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+            transition: 'transform 0.3s ease',
+            backgroundColor: '#013529',
+            color: 'white',
+          }}
+          onMouseEnter={(e) => (e.target.style.transform = 'scale(1.05)')}
+          onMouseLeave={(e) => (e.target.style.transform = 'scale(1)')}
+          onClick={handleScheduleClick}
+        >
+          Schedule Call
+        </button>
+      )}
+
+      {isMobile && (
+        <div className="calendly-container">
+          <div
+            className="calendly-inline-widget"
+            data-url="https://calendly.com/vinaypatel898944"
+            style={{ minWidth: '320px', height: '600px' }}
+          ></div>
+        </div>
+      )}
+    </div>
   </div>
 </div>
 

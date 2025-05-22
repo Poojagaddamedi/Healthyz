@@ -1,0 +1,44 @@
+.calendar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 3rem auto;
+    padding: 0 1rem;
+  }
+  
+  /* Default iframe size */
+  .calendar-container iframe {
+    width: 800px;
+    height: 600px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Animate resize using keyframes on smaller screens */
+  @keyframes shrinkCalendar {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(0.9);
+    }
+  }
+  
+  /* Tablet screen adjustments */
+  @media (max-width: 768px) {
+    .calendar-container iframe {
+      width: 100%;
+      height: 500px;
+      animation: shrinkCalendar 0.3s ease forwards;
+    }
+  }
+  
+  /* Mobile screen adjustments */
+  @media (max-width: 480px) {
+    .calendar-container iframe {
+      width: 100%;
+      height: 450px;
+      animation: shrinkCalendar 0.3s ease forwards;
+    }
+  }
+  

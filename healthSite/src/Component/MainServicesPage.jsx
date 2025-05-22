@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import './ContactUs.css';
+// import './ContactUs.css';
 import ServicesDiv from "./ServicesDiv";
 import Testimonials from "./Testimonials";
 import Faq from "./Faq";
@@ -42,7 +42,7 @@ const MainServicesPage = () => {
     overflow: 'hidden',
   }}
 >
-  {/* Dark Overlay */}
+  {/* Dark Overlay
   <div className="services-overlay" 
     style={{
       position: 'absolute',
@@ -53,7 +53,7 @@ const MainServicesPage = () => {
       backgroundColor: 'rgba(0, 0, 0, 0.5)',
       zIndex: 1,
     }}
-  />
+  /> */}
 
   {/* Content */}
   <div className="services-content" 

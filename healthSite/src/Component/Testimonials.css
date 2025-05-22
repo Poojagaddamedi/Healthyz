@@ -9,6 +9,9 @@
 .testimonials-container {
   scroll-snap-type: x mandatory;
 }
+
+
+
 @media (max-width: 768px) {
   .testimonials-container {
     padding: 1rem 0.5rem !important;

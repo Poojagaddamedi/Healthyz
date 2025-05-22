@@ -35,3 +35,91 @@
   .p-6 {
     padding: 3rem !important;
   }
+
+  /* Mobile responsiveness */
+@media (max-width: 768px) {
+  .flex-title {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .flex-title h1 {
+    font-size: 1.75rem;
+    color: #222;
+    font-weight: bold;
+    animation: fadeInDown 0.8s ease-in-out;
+  }
+
+  #secondName {
+    font-size: 1.25rem !important;
+    color: #444;
+    font-weight: 400;
+    margin-top: -10px;
+    animation: fadeInUp 1s ease-in-out;
+  }
+
+  .flex-card-container {
+    flex-direction: column !important;
+    padding: 2rem !important;
+    gap: 1.5rem;
+  }
+
+  .flex-card {
+    width: 100% !important;
+    padding: 0.5rem !important;
+    animation: slideUp 1s ease forwards;
+  }
+
+  .card-title {
+    font-size: 1.2rem !important;
+    text-align: left !important;
+  }
+
+  .card-text {
+    font-size: 0.9rem !important;
+    line-height: 1.4;
+    text-align: left !important;
+  }
+
+  .card hr {
+    margin: 0.5rem 0 !important;
+  }
+
+  .p-5, .p-4 {
+    padding: 1.25rem !important;
+  }
+}
+
+/* Animations (keyframes) */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

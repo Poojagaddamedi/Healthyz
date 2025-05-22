@@ -1,4 +1,4 @@
-.service-card {
+/* .service-card {
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   border: none;
 }
@@ -39,7 +39,7 @@
   opacity: 0.2;
 }
 
-/* Color Schemes */
+/* Color Schemes 
 .bg-watermelon { background-color: #ff4757; }
 .bg-strawberry { background-color: #ff6b81; }
 .text-watermelon { color: #ff4757; }
@@ -52,61 +52,668 @@
   height: 2px;
   opacity: 1;
 }
+*/
 
-.services-section {
-  background-color: #f8f9fa; /* Light grey */
-  padding-top: 60px;
-  padding-bottom: 60px;
-  border-radius: 16px; /* optional rounded edges */
-  margin-top: 40px; /* Adds top spacing */
+
+
+
+/* ===== Global Variables & Base Styles ===== */
+:root {
+  /* Color System */
+  --primary: #4ac6d6;
+  --primary-foreground: #ffffff;
+  --secondary: #f48fb1;
+  --secondary-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
+  --accent: #e5e7eb;
+  --accent-foreground: #111827;
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --ring: #9ca3af;
+  --background: #ffffff;
+  --foreground: #111827;
+  --card: #ffffff;
+  --card-foreground: #111827;
+  --popover: #ffffff;
+  --popover-foreground: #111827;
+
+  /* Spacing & Sizing */
+  --radius: 0.5rem;
+  --container-padding: 2rem;
+  --container-max-width: 1400px;
+
+  /* Dark Mode - will be applied when .dark class is present */
+  --dark-background: #020817;
+  --dark-foreground: #f8fafc;
+  --dark-card: #020817;
+  --dark-card-foreground: #f8fafc;
+  --dark-popover: #020817;
+  --dark-popover-foreground: #f8fafc;
+  --dark-border: #1e293b;
+  --dark-input: #1e293b;
 }
 
+/* Dark Mode Styles */
+.dark {
+  --background: var(--dark-background);
+  --foreground: var(--dark-foreground);
+  --card: var(--dark-card);
+  --card-foreground: var(--dark-card-foreground);
+  --popover: var(--dark-popover);
+  --popover-foreground: var(--dark-popover-foreground);
+  --border: var(--dark-border);
+  --input: var(--dark-input);
+}
+
+/* ===== Base Element Styles ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Container Styles */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--container-padding);
+}
+
+/* ===== Nutrition Services Specific Styles ===== */
+.nutrition-services-container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--container-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+/* Hide scrollbars but keep functionality */
+.top-row-container,
+.bottom-row-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.services-row {
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  gap: 1rem;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.services-row::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.service-column {
+  flex: 0 0 320px;
+  width: 320px;
+}
+
+.service-card {
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  cursor: pointer;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-card {
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.card-divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 1rem;
+}
+
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card-description {
+  color: white;
+  margin-bottom: 4rem;
+  flex: 1;
+}
+
+.card-image-container {
+  position: absolute;
+  bottom: -1rem;
+  right: -1rem;
+  transition: all 0.3s ease;
+}
+
+.card-image-container.partial-image {
+  width: 120px;
+  height: 120px;
+}
+
+.card-image-container.full-image {
+  width: 180px;
+  height: 180px;
+}
+
+.card-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.schedule-btn {
+  background-color: white;
+  color: #4caf50;
+  border: none;
+  border-radius: calc(var(--radius) - 4px);
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  align-self: flex-start;
+  margin-top: 1rem;
+  z-index: 10;
+}
+
+.schedule-btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* Expanded and compressed states */
+.service-card.expanded {
+  height: 480px;
+}
+
+.service-card.compressed {
+  height: 80px;
+  overflow: hidden;
+}
+
+.top-card.expanded {
+  height: 85%;
+}
+
+.bottom-card.expanded {
+  height: 80%;
+}
+
+/* Independent scrolling for each row */
+.top-row-container {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin-bottom: 1rem;
+}
+
+.bottom-row-container {
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.top-row-container::-webkit-scrollbar,
+.bottom-row-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Green color for selected cards */
+.service-card.green {
+  background-color: #4caf50 !important;
+}
+
+/* ===== Utility Classes ===== */
+/* (Optional - similar to Tailwind utilities) */
+.rounded-lg {
+  border-radius: var(--radius);
+}
+
+.rounded-md {
+  border-radius: calc(var(--radius) - 2px);
+}
+
+.rounded-sm {
+  border-radius: calc(var(--radius) - 4px);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+/* ===== Animations ===== */
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+.animate-accordion-down {
+  animation: accordion-down 0.2s ease-out;
+}
+
+.animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
+}
+
+/* ===== Responsive Styles ===== */
 @media (max-width: 768px) {
-  .flex-card-container {
-    flex-direction: column !important;
-    align-items: center !important;
-    padding: 0.7rem !important;
+  .service-column {
+    flex: 0 0 280px;
+    width: 280px;
   }
 
-  .flex-card {
-    width: 90% !important;
-    margin-bottom: 1.5rem;
+  .service-card {
+    height: 300px;
   }
 
-  .flex-card h1, 
-  .flex-card h2 {
-    text-align: center !important;
-    margin-left: 0 !important;
+  .service-card.expanded {
+    height: 420px;
   }
+}/* .service-card {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: none;
 }
 
-/* Optional: remove left margin on small devices */
-@media (max-width: 576px) {
-  .flex-title {
-    margin-left: 0 !important;
-    padding: 0 1rem;
-font-size: 0.5rem;
-  }
-  #secondName{
-    font-size: 0.3rem;
-  }
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
 }
-/* FlexCard.css */
 
-/* Mobile responsiveness for heading text */
+.card-image-container {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+}
+
+.card-image-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .card-image-container img {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  transition: opacity 0.3s ease;
+}
+
+.service-card:hover .image-overlay {
+  opacity: 0.2;
+}
+
+/* Color Schemes 
+.bg-watermelon { background-color: #ff4757; }
+.bg-strawberry { background-color: #ff6b81; }
+.text-watermelon { color: #ff4757; }
+.text-strawberry { color: #ff6b81; }
+.divider-watermelon { border-color: #ff4757; }
+.divider-strawberry { border-color: #ff6b81; }
+
+.divider-watermelon,
+.divider-strawberry {
+  height: 2px;
+  opacity: 1;
+}
+*/
+
+
+
+
+/* ===== Global Variables & Base Styles ===== */
+:root {
+  /* Color System */
+  --primary: #4ac6d6;
+  --primary-foreground: #ffffff;
+  --secondary: #f48fb1;
+  --secondary-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
+  --accent: #e5e7eb;
+  --accent-foreground: #111827;
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --ring: #9ca3af;
+  --background: #ffffff;
+  --foreground: #111827;
+  --card: #ffffff;
+  --card-foreground: #111827;
+  --popover: #ffffff;
+  --popover-foreground: #111827;
+
+  /* Spacing & Sizing */
+  --radius: 0.5rem;
+  --container-padding: 2rem;
+  --container-max-width: 1400px;
+
+  /* Dark Mode - will be applied when .dark class is present */
+  --dark-background: #020817;
+  --dark-foreground: #f8fafc;
+  --dark-card: #020817;
+  --dark-card-foreground: #f8fafc;
+  --dark-popover: #020817;
+  --dark-popover-foreground: #f8fafc;
+  --dark-border: #1e293b;
+  --dark-input: #1e293b;
+}
+
+/* Dark Mode Styles */
+.dark {
+  --background: var(--dark-background);
+  --foreground: var(--dark-foreground);
+  --card: var(--dark-card);
+  --card-foreground: var(--dark-card-foreground);
+  --popover: var(--dark-popover);
+  --popover-foreground: var(--dark-popover-foreground);
+  --border: var(--dark-border);
+  --input: var(--dark-input);
+}
+
+/* ===== Base Element Styles ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Container Styles */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--container-padding);
+}
+
+/* ===== Nutrition Services Specific Styles ===== */
+.nutrition-services-container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--container-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+/* Hide scrollbars but keep functionality */
+.top-row-container,
+.bottom-row-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.services-row {
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  gap: 1rem;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.services-row::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.service-column {
+  flex: 0 0 320px;
+  width: 320px;
+}
+
+.service-card {
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  cursor: pointer;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-card {
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.card-divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 1rem;
+}
+
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card-description {
+  color: white;
+  margin-bottom: 4rem;
+  flex: 1;
+}
+
+.card-image-container {
+  position: absolute;
+  bottom: -1rem;
+  right: -1rem;
+  transition: all 0.3s ease;
+}
+
+.card-image-container.partial-image {
+  width: 120px;
+  height: 120px;
+}
+
+.card-image-container.full-image {
+  width: 180px;
+  height: 180px;
+}
+
+.card-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.schedule-btn {
+  background-color: white;
+  color: #4caf50;
+  border: none;
+  border-radius: calc(var(--radius) - 4px);
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  align-self: flex-start;
+  margin-top: 1rem;
+  z-index: 10;
+}
+
+.schedule-btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* Expanded and compressed states */
+.service-card.expanded {
+  height: 480px;
+}
+
+.service-card.compressed {
+  height: 80px;
+  overflow: hidden;
+}
+
+.top-card.expanded {
+  height: 85%;
+}
+
+.bottom-card.expanded {
+  height: 80%;
+}
+
+/* Independent scrolling for each row */
+.top-row-container {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin-bottom: 1rem;
+}
+
+.bottom-row-container {
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.top-row-container::-webkit-scrollbar,
+.bottom-row-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Green color for selected cards */
+.service-card.green {
+  background-color: #4caf50 !important;
+}
+
+/* ===== Utility Classes ===== */
+/* (Optional - similar to Tailwind utilities) */
+.rounded-lg {
+  border-radius: var(--radius);
+}
+
+.rounded-md {
+  border-radius: calc(var(--radius) - 2px);
+}
+
+.rounded-sm {
+  border-radius: calc(var(--radius) - 4px);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+/* ===== Animations ===== */
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+.animate-accordion-down {
+  animation: accordion-down 0.2s ease-out;
+}
+
+.animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
+}
+
+/* ===== Responsive Styles ===== */
 @media (max-width: 768px) {
-  #secondName {
-    font-size: 1rem !important;
-   margin-left: 1.3rem;
+  .service-column {
+    flex: 0 0 280px;
+    width: 280px;
   }
 
-  .flex-title h1 {
-    font-size: 1.8rem !important;
-    margin-left: 1.3rem;
+  .service-card {
+    height: 300px;
   }
 
-  .flex-title {
-    margin-left: 0 !important;
-    padding: 0 1rem;
+  .service-card.expanded {
+    height: 420px;
   }
+  .flex-title{
+    margin-top: 4rem;
+  }
+  
 }

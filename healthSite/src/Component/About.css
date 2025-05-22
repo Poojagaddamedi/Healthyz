@@ -55,7 +55,7 @@
   
     .qualifications-section ul {
       /* padding-left: 15px !important; */
-      margin-left: 0rem;
+      margin-left: -8rem;
     }
   
     .qualifications-section li span:first-child {
@@ -91,5 +91,11 @@
   
     .values-content button {
       width: 100% !important;
+    }
+
+    body.calendly-popup-open {
+      transform: scale(0.9);
+      transform-origin: top center;
+      transition: transform 0.3s ease-in-out;
     }
   }

@@ -7,7 +7,7 @@
 
 .faq-header {
   flex: 1;
-  margin-left: 8rem;
+  margin-left: 12rem;
 }
 
 .questions-column {
@@ -27,6 +27,7 @@
   .faq-header {
     text-align: left !important;
     width: 100%;
+    margin-left: 8rem;
   }
 
   .faq-main-title {
@@ -50,7 +51,7 @@
   }
 
   .faq-list-item {
-    margin-left: 0.8rem;
+    margin-left: 1.6rem;
     padding: 0px 0 !important;
   }
 

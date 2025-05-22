@@ -10,8 +10,7 @@ const Navbar = () => {
     <BootstrapNavbar
       expand={false}
       expanded={expanded}
-      className="bg-teal-900 px-4 py-3 shadow-2xl"
-      style={{ boxShadow: '0 4px 20px rgba(0, 0, 0, 0.8)' }}
+      className="bg-teal-900 px-4 py-3"
     >
       <Container fluid className="flex justify-between items-center">
         {/* Logo */}
@@ -19,7 +18,14 @@ const Navbar = () => {
           <img
             src="/logo.jpg"
             alt="Logo"
-            style={{ height: '40px', width: 'auto', objectFit: 'contain' }}
+            className="d-block d-md-none"
+            style={{ height: '30px', width: 'auto', objectFit: 'contain' }}
+          />
+          <img
+            src="/logo.jpg"
+            alt="Logo"
+            className="d-none d-md-block"
+            style={{ height: '60px', width: 'auto', objectFit: 'contain' }}
           />
         </BootstrapNavbar.Brand>
 
@@ -27,17 +33,20 @@ const Navbar = () => {
         <BootstrapNavbar.Toggle
           aria-controls="custom-navbar"
           onClick={() => setExpanded(!expanded)}
-          className="border-0"
+          className="border-0 ml-auto"
         />
       </Container>
+
+      {/* Green Underline for Mobile 
+      <div className="d-block d-md-none" style={{ borderBottom: '3px solid green', margin: '1px 1rem 0 1rem' }}></div>*/}
 
       {/* Collapsible Menu */}
       <BootstrapNavbar.Collapse
         id="custom-navbar"
-        className="bg-white px-4 py-3"
+        className="bg-white px-4 py-3 text-center"
       >
         <Nav
-          className="d-flex justify-content-center align-items-center gap-3 flex-wrap"
+          className="d-flex align-items-center gap-6 flex-wrap"
           style={{ fontSize: '1rem', fontWeight: '500' }}
         >
           <Nav.Link as={Link} to="/" onClick={() => setExpanded(false)} className="text-black">Home</Nav.Link>
