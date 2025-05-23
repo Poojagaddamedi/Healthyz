@@ -4,9 +4,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './index.css'
 import App from './App.jsx'
+import Context from './CreateContext/Context';
+import CalendlyModal from './Component/Calendly/CalendlyModal.jsx';
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <Context>
     <App />
-  </StrictMode>,
-)
+    <CalendlyModal />
+  </Context>
+);

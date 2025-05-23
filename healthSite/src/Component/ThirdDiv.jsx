@@ -38,7 +38,7 @@ const ThirdDiv = () => {
                             style={{ top: '55%', left: '110%', transform: 'translate(-50%, -50%)' }}
                         >
                             <img
-                                src="ThirdDivDocter.jpg"
+                                src="GulnazSheikh.jpg"
                                 alt="Dr. Gulnaaz Shaikh"
                                 className="doctor-img third-div-doctor-img"
                             />

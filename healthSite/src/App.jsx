@@ -9,6 +9,7 @@ import Home from './Component/Home'
 import Navbar from './Component/Navbar'
 import MainServicesPage from './Component/MainServicesPage';
 import About from './Component/About';
+// import Context from './CreateContext/Context';
 
 function App() {
   const [count, setCount] = useState(0)

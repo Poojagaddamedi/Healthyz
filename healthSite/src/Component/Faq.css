@@ -51,8 +51,8 @@
   }
 
   .faq-list-item {
-    margin-left: 1.6rem;
-    padding: 0px 0 !important;
+    margin-left: 2rem;
+    /* padding: 0 px !important; */
   }
 
   .question-text {

@@ -1,31 +1,33 @@
-import React, { useEffect } from 'react';
+import React, { useEffect ,useContext} from 'react'; 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './ContactUs.css';
+import MainContext from '../CreateContext/createContext';
 
 AOS.init();
 
 const Contact = () => {
-  useEffect(() => {
-    // Load Calendly script dynamically
-    const script = document.createElement('script');
-    script.src = 'https://assets.calendly.com/assets/external/widget.js';
-    script.async = true;
-    document.head.appendChild(script);
+  const { openCalendly } = useContext(MainContext);
+  // useEffect(() => {
+  //   // Load Calendly script dynamically
+  //   const script = document.createElement('script');
+  //   script.src = 'https://assets.calendly.com/assets/external/widget.js';
+  //   script.async = true;
+  //   document.head.appendChild(script);
 
-    AOS.refresh();
+  //   AOS.refresh();
 
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
+  //   return () => {
+  //     document.head.removeChild(script);
+  //   };
+  // }, []);
 
-  const handleScheduleClick = (e) => {
-    e.preventDefault();
-    window.Calendly.initPopupWidget({
-      url: 'https://calendly.com/vinaypatel898944'
-    });
-  };
+  // const handleScheduleClick = (e) => {
+  //   e.preventDefault();
+  //   window.Calendly.initPopupWidget({
+  //     url: 'https://calendly.com/vinaypatel898944'
+  //   });
+  // };
 
   return (
     <div 
@@ -62,6 +64,8 @@ const Contact = () => {
           <p style={{ fontSize: '0.95rem', marginBottom: '25px',color:"white" }}>
             Start your healthy journey today.
           </p>
+
+          
           
           {/* Schedule Call Button */}
           <button 
@@ -74,7 +78,7 @@ const Contact = () => {
             }}
             onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
             onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
-            onClick={handleScheduleClick}
+            onClick={openCalendly}
           >
             Schedule Call
           </button>
