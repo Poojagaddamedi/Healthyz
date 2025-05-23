@@ -33,7 +33,7 @@ const Faq = () => {
         {/* Right Column - Questions */}
         <div style={{ flex: 2 }}>
         <div className="questions-column">
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '-2px' }}>
             {questions.map((question, index) => (
               <div
                 key={index}
@@ -49,7 +49,7 @@ const Faq = () => {
                   justifyContent: 'space-between',
                   alignItems: 'center',
                 }}>
-                  <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+                  <div style={{ display: 'flex', gap: '5px', alignItems: 'center' }}>
                     <span className="question-number" style={{ 
                       color: '#666',
                       fontWeight: 'bold',

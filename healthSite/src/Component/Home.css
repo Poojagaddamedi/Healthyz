@@ -152,3 +152,24 @@
     font-size: 18px !important;
   }
 }
+
+/* Define keyframes for wipe-left */
+@keyframes wipe-left {
+  0% {
+    opacity: 0;
+    transform: translateX(50px); /* start slightly right */
+    clip-path: inset(0 100% 0 0); /* hide completely from left to right */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    clip-path: inset(0 0 0 0); /* fully visible */
+  }
+}
+
+/* Apply the animation to your custom AOS class */
+[data-aos="wipe-left"] {
+  animation-name: wipe-left;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}

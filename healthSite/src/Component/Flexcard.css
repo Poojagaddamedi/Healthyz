@@ -35,6 +35,27 @@
   .p-6 {
     padding: 3rem !important;
   }
+  .flex-card {
+    width: 374px !important;
+    height: 302px !important;
+    /* padding: 2rem !important; */
+    /* animation: slideUp 1s ease forwards; */
+  }
+
+  .card-text {
+    font-style: Roboto;
+    font-size: 0.9rem !important;
+    line-height: 1.2;
+    text-align: left !important;
+  }
+  .custom-hr {
+    color: white;
+    height: 4px; /* thickness of the line */
+    width: 80%;  /* or use w-10 in Tailwind */
+    margin: 1rem auto;
+    border-radius: 2px;
+  }
+  
 
   /* Mobile responsiveness */
 @media (max-width: 768px) {
@@ -47,36 +68,38 @@
     font-size: 1.75rem;
     color: #222;
     font-weight: bold;
-    animation: fadeInDown 0.8s ease-in-out;
+    /* animation: fadeInDown 0.8s ease-in-out; */
   }
 
   #secondName {
-    font-size: 1.25rem !important;
+    font-size: 1.35rem !important;
     color: #444;
     font-weight: 400;
-    margin-top: -10px;
-    animation: fadeInUp 1s ease-in-out;
+    margin-top: 1rem;
+    /* animation: fadeInUp 1s ease-in-out; */
+    margin-left: -1rem
   }
 
   .flex-card-container {
     flex-direction: column !important;
-    padding: 2rem !important;
-    gap: 1.5rem;
+    padding: 1rem !important;
+    gap: 2rem;
   }
 
   .flex-card {
     width: 100% !important;
-    padding: 0.5rem !important;
-    animation: slideUp 1s ease forwards;
+    padding: 2rem !important;
+    /* animation: slideUp 1s ease forwards; */
   }
 
   .card-title {
-    font-size: 1.2rem !important;
+    font-size: 1.6rem !important;
     text-align: left !important;
+    font-weight: 400;
   }
 
   .card-text {
-    font-size: 0.9rem !important;
+    font-size: 1rem !important;
     line-height: 1.4;
     text-align: left !important;
   }
@@ -91,7 +114,7 @@
 }
 
 /* Animations (keyframes) */
-@keyframes fadeInDown {
+/* @keyframes fadeInDown {
   from {
     opacity: 0;
     transform: translateY(-20px);
@@ -121,5 +144,4 @@
   to {
     transform: translateY(0px);
     opacity: 1;
-  }
-}
+  /* } */

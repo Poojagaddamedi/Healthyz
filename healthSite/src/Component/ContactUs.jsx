@@ -78,7 +78,7 @@ const Contact = () => {
             }}
             onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
             onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
-            onClick={openCalendly}
+            onClick={'/services'}
           >
             Schedule Call
           </button>
