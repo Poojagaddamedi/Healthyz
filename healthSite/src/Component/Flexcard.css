@@ -1,37 +1,99 @@
-.hover-shadow:hover {
-    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.3);
-    transition: box-shadow 0.3s ease;
+.flex-title {
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+.flex-title h1 {
+  text-align: left;
+  font-size: 2rem;
+}
+
+.flex-title h2 {
+  text-align: left;
+  font-size: 3rem;
+}
+
+.flex-card-container {
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.flex-card {
+  width: 22rem;
+  padding: 1.5rem;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.flex-card:hover {
+  transform: translateY(-5px);
+}
+
+.flex-card .card-title {
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.flex-card .card-text {
+  font-size: 1rem;
+  text-align: left;
+}
+
+.flex-card hr {
+  border-color: #fff;
+  width: 40%;
+  margin: 1rem 0;
+}
+
+/* Tablet responsiveness */
+@media (max-width: 992px) {
+  .flex-title {
+    margin: 0 5%;
   }
-  
-  /* FlexCard.css */
-.card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  .flex-title h2 {
+    font-size: 2.2rem;
   }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2) !important;
+
+  .flex-card {
+    width: 20rem;
   }
-  
-  .card-title {
-    font-size: 1.25rem;
-    color: #333;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .flex-title {
+    margin: 0 1rem;
+    text-align: center;
   }
-  
-  .card-text {
-    font-size: 0.95rem;
-    color: #555;
-    line-height: 1.6;
+
+  .flex-title h1,
+  .flex-title h2 {
+    text-align: center;
+    font-size: 1.8rem;
   }
-  
-  hr {
-    border-top: 2px solid #ccc;
+
+  .flex-title h2 {
+    font-size: 2rem;
   }
-  
-  .bg-light {
-    background-color: #f8f9fa !important;
+
+  .flex-card-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
   }
-  
-  .p-6 {
-    padding: 3rem !important;
+
+  .flex-card {
+    width: 90% !important;
+    padding: 1rem !important;
   }
+
+  .flex-card .card-title,
+  .flex-card .card-text {
+    text-align: center !important;
+  }
+
+  .flex-card hr {
+    width: 50% !important;
+  }
+}
