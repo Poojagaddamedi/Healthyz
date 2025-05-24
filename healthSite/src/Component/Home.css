@@ -1,175 +1,200 @@
-/* Default styles for desktop (no changes for desktop UI) */
-.card-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: stretch;
-  width: 100%;
-  max-width: 1330px;
+/* ===== Keyframes for animations (used for transitions if needed) ===== */
+/* You can extend these if you add more animations later */
+
+/* ========== Default Desktop Styles ========== */
+
+.card-container {
+  position: relative;
+  width: 1330px;
   height: 630px;
   margin: 30px auto 0 auto;
   background: #fff;
   border-radius: 32px;
-  box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.08);
+  flex-direction: row;
+  display: flex;
   overflow: hidden;
-  position: relative;
+  z-index: 2;
 }
 
-/* The green section */
-.green-section {
-  flex: 0 0 40%;
-  background: #014438;
-  border-radius: 32px 0 0 32px;
-  transition: all 0.8s ease;
+.green-div {
+  width: 40%;
   height: 100%;
+  background: #014438;
+  border-radius: 32px;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
 }
 
-/* The food image */
-.food-section {
-  flex: 0 0 60%;
+.green-div.initial {
+  width: 0;
+}
+
+.food-div {
+  width: 60%;
+  height: 100%;
   background-image: url('/HomePage.jpg');
   background-size: cover;
   background-position: center;
   filter: brightness(0.85);
-  border-radius: 0 32px 32px 0;
-  transition: all 1s ease;
-  height: 100%;
+  border-radius: 32px;
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+  margin-left: 1%;
   position: relative;
 }
 
-/* Text container overlay */
-.content-text {
+.food-div.initial {
+  width: 100%;
+  transform: translateY(100%);
+  margin-left: 0;
+}
+
+.text-overlay {
   position: absolute;
-  top: 50%;
   left: 5%;
+  top: 50%;
   transform: translateY(-50%);
   width: 90%;
-  color: white;
-  z-index: 10;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.8s;
+  z-index: 3;
   pointer-events: auto;
-  max-width: 600px;
 }
 
-.main-title {
+.button-main {
+  width: 170px;
+  height: 56px;
+  font-size: 22px;
+  margin-top: 30px;
+  padding: 0 20px;
+  border-radius: 12px;
+  z-index: 4;
+  opacity: 1;
+  transition: opacity 0.8s;
+  pointer-events: auto;
+  align-self: flex-start;
+  background-color: white;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.text-overlay h1 {
   font-size: 110px;
   font-weight: 450;
-  line-height: 1;
   margin: 0;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  margin-top: 5rem;
 }
 
-.sub-title {
+.text-overlay h3 {
   font-size: 34px;
-  margin: 20px 0 0 0;
+  margin-top: -1rem;
+  margin-bottom: -2rem;
+  font-weight: 300;
 }
 
-.nav-button a {
-  display: inline-block;
-  padding: 14px 24px;
-  background-color: #014438;
-  color: white;
-  text-decoration: none;
-  border-radius: 12px;
+.button-container {
+  margin-top: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  justify-content: flex-start;
+  width: 170px;
+  margin-bottom: unset;
+}
+
+/* ===== Button Link Styling (Shared) ===== */
+.button-link {
   font-size: 20px;
-  margin-top: 30px;
+  color: #013529;
+  background-color: white;
+  padding: 0.4rem;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
 }
 
-/* Mobile */
+/* ========== Mobile Styles ========== */
 @media (max-width: 768px) {
-  /* Adjust the flex-direction for mobile */
-  .card-section {
-    flex-direction: column !important;
-    height: auto !important;
-    padding: 10px;
-  }
-
-  .green-section {
-    height: 150px !important;
-    border-radius: 16px 16px 0 0 !important;
-  }
-
-  .food-section {
-    height: 250px !important;
-    border-radius: 0 0 16px 16px !important;
-    background-position: center center;
-    background-size: cover;
-  }
-
-  /* Hide content text overlay on mobile */
-  .content-text {
-    display: none !important;
-  }
-
-  /* Adjust title and subtitle for smaller screens */
-  .main-title {
-    font-size: 3rem !important;
-  }
-
-  .sub-title {
-    font-size: 1.5rem !important;
-  }
-
-  /* Adjust button size for mobile */
-  .nav-button a {
-    font-size: 18px !important;
-    padding: 12px 20px !important;
-  }
-}
-
-/* Tablet */
-@media (max-width: 1024px) {
-  .card-section {
-    flex-direction: row;
+  .card-container {
     width: 95%;
-    height: 400px;
-    margin: 20px auto;
+    height: 500px;
+    margin: 12px;
+    border-radius: 8px;
+    flex-direction: column-reverse;
   }
 
-  .green-section {
-    flex: 0 0 45%;
-    border-radius: 32px 0 0 32px;
+  .green-div {
+    width: 100%;
+    height: 50%;
+    border-radius: 32px;
+    transition: none;
   }
 
-  .food-section {
-    flex: 0 0 55%;
-    border-radius: 0 32px 32px 0;
+  .food-div {
+    width: 100%;
+    height: 50%;
+    transform: translateY(0);
+    border-radius: 32px;
+    transition: none;
+    margin-left: 0;
+    position: relative;
+    bottom: auto;
   }
 
-  .content-text {
+  .food-div.initial {
+    transform: translateY(100%);
+  }
+
+  .text-overlay {
+    left: 4%;
     top: 50%;
-    left: 5%;
+    transform: translateY(-50%);
     width: 90%;
-  }
-
-  .main-title {
-    font-size: 3rem !important;
-  }
-
-  .sub-title {
-    font-size: 1.5rem !important;
-  }
-
-  .nav-button a {
-    font-size: 18px !important;
-  }
-}
-
-/* Define keyframes for wipe-left */
-@keyframes wipe-left {
-  0% {
-    opacity: 0;
-    transform: translateX(50px); /* start slightly right */
-    clip-path: inset(0 100% 0 0); /* hide completely from left to right */
-  }
-  100% {
     opacity: 1;
-    transform: translateX(0);
-    clip-path: inset(0 0 0 0); /* fully visible */
+    pointer-events: auto;
   }
-}
 
-/* Apply the animation to your custom AOS class */
-[data-aos="wipe-left"] {
-  animation-name: wipe-left;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
+  .button-main {
+    width: 100%;
+    height: 48px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .text-overlay h1 {
+    font-size: 42px;
+    font-weight: 450;
+    margin: 0;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+    margin-top: unset;
+  }
+
+  .text-overlay h3 {
+    font-size: 20px;
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+    font-weight: 300;
+  }
+
+  .button-container {
+    margin-top: 0.7rem;
+    width: 22rem;
+    margin-bottom: -1rem;
+  }
+
+  .button-link {
+    font-size: 16px;
+  }
 }

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { FaMousePointer, FaCalendarDay, FaFileSignature, FaVideo, FaInfoCircle, FaPhone } from 'react-icons/fa';
 import { useForm } from "react-hook-form";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -186,8 +187,172 @@ const MainContactUsPage = () => {
     </div>
   </div>
 </section>
+<section className="booking-instructions" style={{ 
+  padding: '4rem 0',
+  background: 'linear-gradient(135deg, #f3f9ff 0%, #f8f5ff 100%)'
+}}>
+  <div className="container" style={{
+    maxWidth: '1200px',
+    margin: '0 auto',
+    padding: '0 1.5rem'
+  }}>
+    <h2 style={{
+      color: '#2a4b6e',
+      fontSize: '2.3rem',
+      marginBottom: '2rem',
+      fontWeight: '700',
+      textAlign: 'center',
+      fontFamily: 'Poppins, sans-serif',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: '1rem'
+    }}>
+      <FaInfoCircle style={{ color: '#4299e1' }} />
+      How to Book Your Consultation
+    </h2>
 
-<section className="calendly-section" style={{ 
+    <div style={{
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+      gap: '2rem',
+      marginBottom: '3rem'
+    }}>
+      {/* Step 1 */}
+      <div style={{
+        backgroundColor: 'white',
+        borderRadius: '15px',
+        padding: '2rem',
+        boxShadow: '0 5px 15px rgba(0,0,0,0.08)',
+        transition: 'transform 0.3s ease',
+        ':hover': { transform: 'translateY(-5px)' }
+      }}>
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '1rem',
+          marginBottom: '1.5rem'
+        }}>
+          <div style={{
+            backgroundColor: '#4299e1',
+            width: '40px',
+            height: '40px',
+            borderRadius: '50%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
+            <FaMousePointer style={{ color: 'white', fontSize: '1.2rem' }} />
+          </div>
+          <h3 style={{ margin: 0, color: '#2a4b6e', fontSize: '1.3rem' }}>Step 1: Select Service</h3>
+        </div>
+        <p style={{ color: '#4a5568', lineHeight: '1.6' }}>
+          Choose between <strong>Diet Consultation</strong> or <strong>Medical Nutrition Therapy</strong> based on your needs
+        </p>
+      </div>
+
+      {/* Step 2 */}
+      <div style={{
+        backgroundColor: 'white',
+        borderRadius: '15px',
+        padding: '2rem',
+        boxShadow: '0 5px 15px rgba(0,0,0,0.08)',
+        transition: 'transform 0.3s ease',
+        ':hover': { transform: 'translateY(-5px)' }
+      }}>
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '1rem',
+          marginBottom: '1.5rem'
+        }}>
+          <div style={{
+            backgroundColor: '#48bb78',
+            width: '40px',
+            height: '40px',
+            borderRadius: '50%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
+            <FaCalendarDay style={{ color: 'white', fontSize: '1.2rem' }} />
+          </div>
+          <h3 style={{ margin: 0, color: '#2a4b6e', fontSize: '1.3rem' }}>Step 2: Pick Time Slot</h3>
+        </div>
+        <p style={{ color: '#4a5568', lineHeight: '1.6' }}>
+          Select your preferred date and time from available slots (15/30/60 minute options)
+        </p>
+      </div>
+
+      {/* Step 3 */}
+      <div style={{
+        backgroundColor: 'white',
+        borderRadius: '15px',
+        padding: '2rem',
+        boxShadow: '0 5px 15px rgba(0,0,0,0.08)',
+        transition: 'transform 0.3s ease',
+        ':hover': { transform: 'translateY(-5px)' }
+      }}>
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '1rem',
+          marginBottom: '1.5rem'
+        }}>
+          <div style={{
+            backgroundColor: '#f6ad55',
+            width: '40px',
+            height: '40px',
+            borderRadius: '50%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
+            <FaFileSignature style={{ color: 'white', fontSize: '1.2rem' }} />
+          </div>
+          <h3 style={{ margin: 0, color: '#2a4b6e', fontSize: '1.3rem' }}>Step 3: Provide Details</h3>
+        </div>
+        <p style={{ color: '#4a5568', lineHeight: '1.6' }}>
+          Fill in your medical history and current concerns for personalized consultation
+        </p>
+      </div>
+
+      {/* Step 4 */}
+      <div style={{
+        backgroundColor: 'white',
+        borderRadius: '15px',
+        padding: '2rem',
+        boxShadow: '0 5px 15px rgba(0,0,0,0.08)',
+        transition: 'transform 0.3s ease',
+        ':hover': { transform: 'translateY(-5px)' }
+      }}>
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '1rem',
+          marginBottom: '1.5rem'
+        }}>
+          <div style={{
+            backgroundColor: '#f56565',
+            width: '40px',
+            height: '40px',
+            borderRadius: '50%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
+            <FaVideo style={{ color: 'white', fontSize: '1.2rem' }} />
+          </div>
+          <h3 style={{ margin: 0, color: '#2a4b6e', fontSize: '1.3rem' }}>Step 4: Join Session</h3>
+        </div>
+        <p style={{ color: '#4a5568', lineHeight: '1.6' }}>
+          Receive confirmation email with Zoom link. Test your audio/video beforehand
+        </p>
+      </div>
+    </div>
+
+
+    <section className="calendly-section" style={{ 
   padding: '5rem 0',
   background: 'linear-gradient(45deg, #f8fafc 0%, #f0f4ff 100%)'
 }}>
@@ -247,8 +412,55 @@ const MainContactUsPage = () => {
 </section>
 
 
+    <div style={{
+      backgroundColor: '#f8fafc',
+      borderRadius: '15px',
+      padding: '2rem',
+      textAlign: 'center',
+      marginTop: '2rem',
+      border: '2px solid #e2e8f0'
+    }}>
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: '0.5rem',
+        marginBottom: '1rem'
+      }}>
+        <FaPhone style={{ color: '#4299e1' }} />
+        <h3 style={{ margin: 0, color: '#2a4b6e' }}>Need Help Booking?</h3>
+      </div>
+      <p style={{ color: '#4a5568', marginBottom: '1rem' }}>
+        Call our support team at <strong>+91 12345 67890</strong> or<br />
+        Email <strong>support@healthyz.com</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+
     </>
   );
 };
 
 export default MainContactUsPage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

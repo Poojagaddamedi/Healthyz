@@ -1,11 +1,19 @@
-import React, { useState } from "react";
+import React, { useRef, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import "./ServicesDiv.css";
 import fruit1 from '../assets/orange1.png';
 import fruit2 from '../assets/starwberry1.png';
 
 const ServicesDiv = () => {
   const navigate = useNavigate();
+
+  const row1Ref = useRef(null);
+  const row2Ref = useRef(null);
+  const [showControls1, setShowControls1] = useState({ left: false, right: true });
+  const [showControls2, setShowControls2] = useState({ left: false, right: true });
+
+
 
   const handleClick = () => {
     navigate('/contact');
@@ -54,6 +62,52 @@ const ServicesDiv = () => {
     return '';
   };
 
+  const checkScroll = (ref, setControls) => {
+    if (ref && ref.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = ref.current;
+      const maxScroll = scrollWidth - clientWidth;
+
+      setControls({
+        left: scrollLeft > 0,
+        right: scrollLeft < maxScroll
+      });
+    }
+  };
+
+  const scrollCards = (ref, direction) => {
+    if (ref.current) {
+      const scrollAmount = ref.current.clientWidth * 0.8;
+      const delta = direction === 'right' ? scrollAmount : -scrollAmount;
+
+      ref.current.scrollBy({
+        left: delta,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  useEffect(() => {
+    [row1Ref, row2Ref].forEach((ref, i) => {
+      checkScroll(ref, i === 0 ? setShowControls1 : setShowControls2);
+    });
+
+    const handleResize = () => {
+      [row1Ref, row2Ref].forEach((ref, i) => {
+        checkScroll(ref, i === 0 ? setShowControls1 : setShowControls2);
+      });
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const scrollbarStyles = `
+  ::-webkit-scrollbar {
+    display: none;
+  }
+`;
+
+
   return (
     <div className="services-scroll-wrapper">
       <div className="headd">
@@ -62,7 +116,23 @@ const ServicesDiv = () => {
           Healthyz Provides
         </p>
       </div>
-        <div className="horizontal-scroll">
+
+      <div className='rowWrapper'>
+  {showControls1.left && (
+    <button
+      className='navButtonStyle left'
+      onClick={() => scrollCards(row1Ref, 'left')}
+    >
+      <FaChevronLeft />
+    </button>
+  )}
+
+       <div
+          ref={row1Ref}
+          className='rowContainerStyle'
+          onScroll={() => checkScroll(row1Ref, setShowControls1)}
+        >
+
       <div className="services-container">
         {services.map((service, index) => (
           <div
@@ -92,8 +162,19 @@ const ServicesDiv = () => {
           </div>
         ))}
       </div>
-    </div>
-    </div>
+      </div>
+
+      {showControls1.right && (
+    <button
+      className='navButtonStyle right'
+      onClick={() => scrollCards(row1Ref, 'right')}
+    >
+      <FaChevronRight />
+    </button>
+  )}
+</div>
+
+      </div>
   );
 };
 

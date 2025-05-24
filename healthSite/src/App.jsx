@@ -9,6 +9,7 @@ import Home from './Component/Home'
 import Navbar from './Component/Navbar'
 import MainServicesPage from './Component/MainServicesPage';
 import About from './Component/About';
+import DemoSlide from './Component/DemoSlide';
 // import Context from './CreateContext/Context';
 
 function App() {
@@ -22,7 +23,8 @@ function App() {
         <Route path="/" element={<Home />} /> 
         <Route path="/contact" element={<MainContactUsPage />} />  
         <Route path="/services" element={<MainServicesPage />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<About />} />   
+        <Route path="/demo" element={<DemoSlide />} />
       </Routes>
     </Router>
     </>

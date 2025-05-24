@@ -79,12 +79,14 @@
 } 
 @media (max-width: 768px) {
   .salad-img {
+    margin-top: 2rem;
     width: 100%;
     height: 170px;
     object-fit: cover;
     margin-bottom: 7rem;
   }
   .about-title-mobile {
+    margin-top: 2rem;
     position: absolute;
     top: -60px;                 /* distance from the top */
     left: 20%;                 /* center horizontally */

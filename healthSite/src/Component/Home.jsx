@@ -128,102 +128,52 @@ const foodStyle = {
     <>
       {/* LOGO */}
       {/* CARD SECTION */}
-      <div style={cardStyle}>
-        <div style={greenStyle}></div>
-        <div style={foodStyle}></div>
-        {step === 3 && (
-  <div style={textStyle}>
+      <div className={`card-container`}>
+  <div className={`green-div ${step <= 1 ? 'initial' : ''}`}></div>
+  <div className={`food-div ${step === 0 ? 'initial' : ''}`}></div>
+
+  <div
+    className="text-overlay"
+    style={{
+      opacity: step === 3 ? 1 : 0,
+      pointerEvents: step === 3 ? 'auto' : 'none',
+    }}
+  >
     <h1
       data-aos={isMobile ? undefined : "fade"}
       data-aos-offset="20"
       data-aos-duration="600"
       data-aos-easing="ease-in-out"
-      style={{
-        fontSize: isMobile ? 42 : 110,
-        fontWeight: 450,
-        margin: 0,
-        lineHeight: isMobile ? "1.2" : "1",
-        marginBottom: isMobile ? "1.2rem" : "1.5rem",
-        marginTop: isMobile ? "" : "5rem",
-      }}
     >
       Welcome to Healthyz
     </h1>
-    <h3
-    // data-aos={isMobile ? undefined : "fade"}
-    //   data-aos-delay="100"
-    //   data-aos-offset="20"
-    //   data-aos-duration="600"
-    //   data-aos-easing="ease-in-out"
-      style={{
-        fontSize: isMobile ? 20 : 34,
-    marginTop: isMobile ? "7rem" : "-1rem",
-    marginBottom : isMobile ? "3rem" : "-2rem",
-    fontWeight : 300
-      }}
-    >
-      – Your Partner in Health
-    </h3>
+
+    <h3>– Your Partner in Health</h3>
+
     <div
-  data-aos={isMobile ? undefined : "wipe-left"}
-  data-aos-delay="300"
-  data-aos-offset="10"
-  data-aos-duration="600"
-  style={{
-    marginTop: isMobile ? "0.7rem" : "1.8rem",
-    display: "flex",
-    flexDirection: "column",  // stack vertically on mobile
-    gap: "0px",              // space between buttons
-    justifyContent: "flex-start",
-    marginBottom : isMobile ? "-1rem" : "",
-     width : isMobile ? "22rem" : "170"
-  }}
->
-  <button style={buttonStyle}>
-    <Link
-      to="/services"
-      style={{
-        fontSize: isMobile ? 16 : 20,
-        color: "#013529",
-        backgroundColor: "white",
-        padding: "0.4rem",
-        borderRadius: "6px",
-        textDecoration: "none",
-        display: "inline-block",
-        width: "100%",
-        textAlign: "center",
-      }}
+      className="button-container"
+      data-aos={isMobile ? undefined : "wipe-left"}
+      data-aos-delay="300"
+      data-aos-offset="10"
+      data-aos-duration="600"
     >
-      See Services
-    </Link>
-  </button>
+      <button className="button-main">
+        <Link to="/services" className="button-link">
+          See Services
+        </Link>
+      </button>
 
-  {isMobile && (
-    <button style={buttonStyle}>
-      <Link
-        to="/contact"
-        style={{
-          fontSize: 16,
-          color: "#013529",
-          backgroundColor: "white",
-          padding: "0.4rem",
-          borderRadius: "6px",
-          textDecoration: "none",
-          display: "inline-block",
-          width: "100%",
-          textAlign: "center",
-          // marginBottom : "2rem"
-        }}
-      >
-        Schedule a Call
-      </Link>
-    </button>
-  )}
-</div>
-
+      {isMobile && (
+        <button className="button-main">
+          <Link to="/contact" className="button-link">
+            Schedule a Call
+          </Link>
+        </button>
+      )}
+    </div>
   </div>
-)}
 </div>
+
       {/* REST OF THE PAGE */}
       <SecondDiv />
       <ThirdDiv/>
