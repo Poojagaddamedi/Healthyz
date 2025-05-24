@@ -1,7 +1,24 @@
 /* Mobile Responsive CSS */
+
+.philosophy-box{
+  width: 52rem;
+}
+
+.philosophy-box h2{
+  margin-left: 5rem !important;
+  font-size: 4rem;
+}
+    .philosophy-box p {
+      margin-left: 5rem !important;
+  
+    }
+
 @media (max-width: 768px) {
     .about-hero {
       height: 250px !important;
+    }
+    .philosophy-box{
+      width: 23rem;
     }
     
     .hero-title {
@@ -20,6 +37,7 @@
     }
   
     .about-description {
+      width: 23rem;
       margin-left: 0 !important;
       text-indent: 0 !important;
       padding: 0 10px !important;
@@ -30,7 +48,7 @@
     .philosophy-box h2,
     .philosophy-box p {
       margin-left: 0 !important;
-      padding: 1rem !important;
+      padding: 0.5rem !important;
     }
   
     .doctor-image-container {

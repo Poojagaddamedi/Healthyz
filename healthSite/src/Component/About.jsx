@@ -1,4 +1,6 @@
 import React, { useEffect ,useState} from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Testimonials from "./Testimonials";
@@ -27,13 +29,10 @@ const About = () => {
     return () => document.head.removeChild(script);
   }, []);
 
-  const handleScheduleClick = (e) => {
-    e.preventDefault();
-    if (!isMobile) {
-      window.Calendly.initPopupWidget({
-        url: 'https://calendly.com/vinaypatel898944',
-      });
-    }
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/contact');
   };
   return (
     <>
@@ -346,20 +345,10 @@ const About = () => {
           }}
           onMouseEnter={(e) => (e.target.style.transform = 'scale(1.05)')}
           onMouseLeave={(e) => (e.target.style.transform = 'scale(1)')}
-          onClick={handleScheduleClick}
+          onClick={handleClick}
         >
           Schedule Call
         </button>
-      )}
-
-      {isMobile && (
-        <div className="calendly-container">
-          <div
-            className="calendly-inline-widget"
-            data-url="https://calendly.com/vinaypatel898944"
-            style={{ minWidth: '320px', height: '600px' }}
-          ></div>
-        </div>
       )}
     </div>
   </div>

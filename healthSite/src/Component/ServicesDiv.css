@@ -1,15 +1,30 @@
 /* Wrapper for horizontal scroll */
 .services-scroll-wrapper {
   overflow-x: auto;
-  max-width: 100%;
+  width: 100%;
   padding: 2rem 1rem;
   scrollbar-width: none;            /* Firefox */
-  -ms-overflow-style: none;         /* IE/Edge */
+  -ms-overflow-style: none;  
+         /* IE/Edge */
+         margin-left: 4rem;
+         overflow: hidden;
 }
 
 .services-scroll-wrapper::-webkit-scrollbar {
   display: none;                    /* Chrome/Safari */
 }
+
+.headd{
+  margin-left: 2rem;
+}
+.headd h2{
+ font-size: 2rem;
+ font-weight: 700;
+}
+.headd p{
+  font-size: 2rem;
+  font-weight:400;
+ }
 
 /* Grid container */
 .services-container {
@@ -89,14 +104,14 @@
 
 /* Image styling */
 .service-card img {
-  width: 150px;
-  max-height: 200px;
+  width: 200px;
+  max-height: 250px;
   object-fit: contain;
-  align-self: flex-end;
-  margin-top: 1rem;
-  margin-bottom: 0;
+  /* align-self: flex-end; */
+  margin-top: -1rem;
   padding: 0;
   transition: none;
+  margin-left: 5rem;
 }
 
 /* Button container */
@@ -124,6 +139,7 @@
   text-align: center;
   width: auto; /* 👈 Let it size naturally */
   min-width: 100px; /* Optional: consistent width */
+  /* margin-bottom: 1rem; */
 }
 
 .schedule-button:hover {
@@ -135,7 +151,7 @@
 /* Expanded styles */
 .service-card.enlarged,
 .service-card.expand-up {
-  height: 480px;
+  height: 380px;
   grid-column: span 4;
   grid-row: span 2;
   padding: 2rem;
@@ -145,13 +161,17 @@
 
 .service-card.enlarged img,
 .service-card.expand-up img {
-  width: 50px;
+  width: 100px;
+  display: none;
+  transform: scale(0);
+  opacity: 0;
+  transition: all 0.3s ease;
 }
 
 /* Push down other cards */
 .service-card.pushed-down {
-  transform: translateY(150px);
-  height: 120px;
+  transform: translateY(100px);
+  height: 160px;
   opacity: 0.7;
   background-color: #4AC6D6;
   pointer-events: none;
@@ -159,14 +179,14 @@
 
 /* Compress cards above expanded */
 .service-card.expand-up {
-  height: 420px;
+  height: 380px;
   grid-column: span 4;
   margin-top: -100px;
-  grid-row: span 2;
+  grid-row: span 1;
 }
 
 .service-card.compressed {
-  height: 120px;
+  height: 160px;
   opacity: 0.7;
   background-color: rgba(56, 189, 248, 0.6);
   pointer-events: none;

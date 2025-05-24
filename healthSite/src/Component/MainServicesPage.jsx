@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 // import './ContactUs.css';
@@ -12,6 +13,8 @@ import './MainServicesPage.css';
 AOS.init();
 
 const MainServicesPage = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
 
     const script = document.createElement('script');
@@ -23,6 +26,11 @@ const MainServicesPage = () => {
       document.head.removeChild(script);
     };
   }, []);
+
+
+  const handleClick = () => {
+    navigate('/contact');
+  };
 
   const handleScheduleClick = (e) => {
     e.preventDefault();
@@ -82,7 +90,7 @@ const MainServicesPage = () => {
         }}
         onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
         onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
-        onClick={handleScheduleClick}
+        onClick={handleClick}
       >
         Schedule Call
       </button>

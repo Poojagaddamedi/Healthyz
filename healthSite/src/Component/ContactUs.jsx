@@ -1,12 +1,21 @@
 import React, { useEffect ,useContext} from 'react'; 
+import { useNavigate } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './ContactUs.css';
 import MainContext from '../CreateContext/createContext';
+import { Link } from 'react-router-dom'; 
 
 AOS.init();
 
 const Contact = () => {
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/contact'); // 👈 Navigate to "/services"
+  };
+
   const { openCalendly } = useContext(MainContext);
   // useEffect(() => {
   //   // Load Calendly script dynamically
@@ -71,6 +80,7 @@ const Contact = () => {
           <button 
             className="btn btn-light px-4 py-2 "
             style={{
+              color : "#013529",
               fontWeight: '600',
               fontSize: '0.95rem',
               boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
@@ -78,9 +88,9 @@ const Contact = () => {
             }}
             onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
             onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
-            onClick={'/services'}
+            onClick={handleClick}
           >
-            Schedule Call
+    Schedule Call
           </button>
         </div>
       </div>

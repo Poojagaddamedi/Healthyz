@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+
+import { Link } from 'react-router-dom'; 
 import AOS from "aos";
 import "aos/dist/aos.css";
 import './Home.css';
@@ -10,7 +12,6 @@ import Testimonials from "./Testimonials";
 import Faq from "./Faq";
 import ContactUs from "./ContactUs";
 import Footer from "./Footer";
-import { Link } from 'react-router-dom'; 
 
 function HealthyzHome() {
   // Animation states
@@ -149,11 +150,11 @@ const foodStyle = {
       Welcome to Healthyz
     </h1>
     <h3
-    data-aos={isMobile ? undefined : "fade"}
-      data-aos-delay="100"
-      data-aos-offset="20"
-      data-aos-duration="600"
-      data-aos-easing="ease-in-out"
+    // data-aos={isMobile ? undefined : "fade"}
+    //   data-aos-delay="100"
+    //   data-aos-offset="20"
+    //   data-aos-duration="600"
+    //   data-aos-easing="ease-in-out"
       style={{
         fontSize: isMobile ? 20 : 34,
     marginTop: isMobile ? "7rem" : "-1rem",
@@ -200,7 +201,7 @@ const foodStyle = {
   {isMobile && (
     <button style={buttonStyle}>
       <Link
-        to="/schedule-call"
+        to="/contact"
         style={{
           fontSize: 16,
           color: "#013529",
