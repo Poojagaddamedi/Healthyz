@@ -118,68 +118,44 @@ const ServicesDiv = () => {
       </div>
 
       <div className='rowWrapper'>
-  {showControls1.left && (
-    <button
-      className='navButtonStyle left'
-      onClick={() => scrollCards(row1Ref, 'left')}
-    >
-      <FaChevronLeft />
-    </button>
-  )}
-
-       <div
+        <div
           ref={row1Ref}
           className='rowContainerStyle'
           onScroll={() => checkScroll(row1Ref, setShowControls1)}
         >
-
-      <div className="services-container">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className={`service-card ${getCardClass(index)}`}
-            onMouseEnter={() => setHoveredCard(index)}
-            onMouseLeave={() => setHoveredCard(null)}
-            style={{
-              gridColumn: `${(index % columns) + 1}`,
-              gridRow: `${Math.floor(index / columns) + 1}`,
-            }}
-          >
-            <div className="card-content">
-              <div className="text-content">
-                <h3>{service.title}</h3>
-                <p>{service.description}</p>
+          <div className="services-container">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className={`service-card ${getCardClass(index)}`}
+                onMouseEnter={() => setHoveredCard(index)}
+                onMouseLeave={() => setHoveredCard(null)}
+                style={{
+                  gridColumn: (index % columns) + 1,
+                  gridRow: Math.floor(index / columns) + 1,
+                }}                
+              >
+                <div className="card-content">
+                  <div className="text-content">
+                    <h3>{service.title}</h3>
+                    <p>{service.description}</p>
+                  </div>
+                  <img src={service.image} alt={service.title} />
+                </div>
+                {hoveredCard === index && (
+                  <div className="card-details">
+                    <button className="schedule-button"
+                    onClick={handleClick}
+                    >Schedule Call</button>
+                  </div>
+                )}
               </div>
-              <img src={service.image} alt={service.title} />
-            </div>
-            {hoveredCard === index && (
-              <div className="card-details">
-                <button className="schedule-button"
-                onClick={handleClick}
-                >Schedule Call</button>
-              </div>
-            )}
+            ))}
           </div>
-        ))}
+        </div>
       </div>
-      </div>
-
-      {showControls1.right && (
-    <button
-      className='navButtonStyle right'
-      onClick={() => scrollCards(row1Ref, 'right')}
-    >
-      <FaChevronRight />
-    </button>
-  )}
-</div>
-
-      </div>
+    </div>
   );
 };
 
 export default ServicesDiv;
-
-
-
-

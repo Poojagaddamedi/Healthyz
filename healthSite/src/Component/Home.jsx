@@ -19,17 +19,22 @@ function HealthyzHome() {
   const isMobile = window.innerWidth <= 768;
   useEffect(() => {
     AOS.init({ duration: 1700 });
-    // Step 1: after 1s, animate first image up
-    const timer1 = setTimeout(() => setStep(1), 1000);
-    // Step 2: after another 1s, move first image right and show green image
-    const timer2 = setTimeout(() => setStep(2), 2000);
-    // Step 3: after another 1s, show text/button
-    const timer3 = setTimeout(() => setStep(3), 3000);
-    return () => {
-      clearTimeout(timer1);
-      clearTimeout(timer2);
-      clearTimeout(timer3);
-    };
+    if (!isMobile) {
+      // Step 1: after 1s, animate first image up
+      const timer1 = setTimeout(() => setStep(1), 1000);
+      // Step 2: after another 1s, move first image right and show green image
+      const timer2 = setTimeout(() => setStep(2), 2000);
+      // Step 3: after another 1s, show text/button
+      const timer3 = setTimeout(() => setStep(3), 3000);
+      return () => {
+        clearTimeout(timer1);
+        clearTimeout(timer2);
+        clearTimeout(timer3);
+      };
+    } else {
+      // Directly set step to 3 for mobile to show everything without animation
+      setStep(3);
+    }
   }, []);
 
   // Logo style
@@ -72,7 +77,7 @@ function HealthyzHome() {
 const foodStyle = {
   width: isMobile ? "100%" : step > 1 ? "60%" : "100%",
   height: isMobile ? "50%" : "100%",
-  transform: step === 0 ? "translateY(100%)" : "translateY(0)",
+  transform: isMobile ? "translateY(0)" : step === 0 ? "translateY(100%)" : "translateY(0)",
   backgroundImage: `url('/HomePage.jpg')`,
   backgroundSize: "cover",
   backgroundPosition: "center",
@@ -128,7 +133,7 @@ const foodStyle = {
     <>
       {/* LOGO */}
       {/* CARD SECTION */}
-      <div className={`card-container`}>
+      <div className="card-container">
   <div className={`green-div ${step <= 1 ? 'initial' : ''}`}></div>
   <div className={`food-div ${step === 0 ? 'initial' : ''}`}></div>
 
@@ -140,10 +145,11 @@ const foodStyle = {
     }}
   >
     <h1
-      data-aos={isMobile ? undefined : "fade"}
-      data-aos-offset="20"
-      data-aos-duration="600"
-      data-aos-easing="ease-in-out"
+      // Removed AOS attributes to prevent left animation
+      // data-aos={isMobile ? undefined : "fade-up"}
+      // data-aos-offset="20"
+      // data-aos-duration="800"
+      // data-aos-easing="ease-in-out"
     >
       Welcome to Healthyz
     </h1>
@@ -152,10 +158,11 @@ const foodStyle = {
 
     <div
       className="button-container"
-      data-aos={isMobile ? undefined : "wipe-left"}
-      data-aos-delay="300"
-      data-aos-offset="10"
-      data-aos-duration="600"
+      // Removed AOS attributes to prevent fade animation
+      // data-aos={isMobile ? undefined : "fade-left"}
+      // data-aos-delay="300"
+      // data-aos-offset="10"
+      // data-aos-duration="2000"
     >
       <button className="button-main">
         <Link to="/services" className="button-link">

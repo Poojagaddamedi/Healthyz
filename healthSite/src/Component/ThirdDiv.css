@@ -88,8 +88,8 @@
   .about-title-mobile {
     margin-top: 2rem;
     position: absolute;
-    top: -60px;                 /* distance from the top */
-    left: 20%;                 /* center horizontally */
+    top: -60px;                
+    left: 20%;                
     transform: translateX(-50%);
     font-size: 28px;
     font-weight: bold;

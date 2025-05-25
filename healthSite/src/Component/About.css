@@ -13,6 +13,8 @@
   
     }
 
+   
+
 @media (max-width: 768px) {
     .about-hero {
       height: 250px !important;
@@ -57,23 +59,24 @@
       height: 300px !important;
     }
   
+    
     .qualifications-section {
       min-width: 100% !important;
-      margin-left: 0 !important;
+      margin-left: -4rem !important;
       padding: 0 15px !important;
       margin-Top : "15rem"
     }
     
     .section-title {
       font-size: 24px !important;
-      margin-left: 0 !important;
+      margin-left: 3rem !important;
       margin-top: 10rem;
       /* text-align: center !important; */
     }
   
     .qualifications-section ul {
-      /* padding-left: 15px !important; */
-      margin-left: -8rem;
+      padding-left: 0 !important;
+      margin-left: 0 !important;
     }
   
     .qualifications-section li span:first-child {
@@ -117,3 +120,22 @@
       transition: transform 0.3s ease-in-out;
     }
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
