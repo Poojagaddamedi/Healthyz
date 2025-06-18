@@ -398,7 +398,7 @@ const MainContactUsPage = () => {
 
           {/* Calendly Iframe */}
           <iframe
-            src="https://calendly.com/healthyz045"
+            src="https://calendly.com/healthyz045/30min"
             onLoad={() => setLoading(false)}
             style={{ 
               minWidth: '320px',
