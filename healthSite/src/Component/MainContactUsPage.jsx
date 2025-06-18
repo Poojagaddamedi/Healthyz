@@ -453,7 +453,7 @@ const MainContactUsPage = () => {
       </div>
       <p style={{ color: '#4a5568', marginBottom: '1rem' }}>
         Call our support team at <strong>+91 12345 67890</strong> or<br />
-        Email <strong>support@healthyz.com</strong>
+        Email <strong>healthyz045@gmail.com</strong>
       </p>
     </div>
   </div>
