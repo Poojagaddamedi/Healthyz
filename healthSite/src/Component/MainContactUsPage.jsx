@@ -451,8 +451,7 @@ const MainContactUsPage = () => {
         <FaPhone style={{ color: '#4299e1' }} />
         <h3 style={{ margin: 0, color: '#2a4b6e' }}>Need Help Booking?</h3>
       </div>
-      <p style={{ color: '#4a5568', marginBottom: '1rem' }}>
-        Call our support team at <strong>+91 12345 67890</strong> or<br />
+      <p style={{ color: '#4a5568', marginBottom: '1rem' }}><br />
         Email <strong>healthyz045@gmail.com</strong>
       </p>
     </div>
