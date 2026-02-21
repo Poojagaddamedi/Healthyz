@@ -56,365 +56,365 @@ const MainContactUsPage = () => {
       </div>
 
       {/* About Healthyz Section */}
-      <section className="about-healthyz" style={{ 
-  padding: '5rem 0',
-  background: 'linear-gradient(135deg, #e3fdf5 0%, #ffe6fa 100%)',
-  position: 'relative'
-}}>
-  <div className="container" style={{
-    maxWidth: '1200px',
-    margin: '0 auto',
-    padding: '0 1.5rem',
-    position: 'relative',
-    zIndex: 1
-  }}>
-    <h2 style={{
-      color: '#2a4b6e',
-      fontSize: '2.5rem',
-      marginBottom: '2rem',
-      fontWeight: '700',
-      textAlign: 'center',
-      fontFamily: 'Poppins, sans-serif',
-      textShadow: '1px 1px 2px rgba(0,0,0,0.05)'
-    }}>About Healthyz</h2>
-    
-    <div style={{
-      backgroundColor: 'rgba(255,255,255,0.9)',
-      borderRadius: '20px',
-      padding: '2.5rem',
-      boxShadow: '0 8px 30px rgba(0,0,0,0.08)',
-      marginBottom: '2rem'
-    }}>
-      <p style={{
-        color: '#4a5568',
-        fontSize: '1.1rem',
-        lineHeight: '1.8',
-        marginBottom: '2rem',
-        fontWeight: '500'
+      <section className="about-healthyz" style={{
+        padding: '5rem 0',
+        background: 'linear-gradient(135deg, #e3fdf5 0%, #ffe6fa 100%)',
+        position: 'relative'
       }}>
-        🌱 Healthyz is your guide to a better lifestyle through expert dietary planning and health consultation.<br />
-        We provide personalized diet plans based on your medical condition and help you understand:
-      </p>
-      
-      <ul style={{
-        listStyleType: 'none',
-        paddingLeft: '0',
-        columns: '2',
-        gap: '2rem',
-        color: '#4a5568'
-      }}>
-        <li style={{ 
-          marginBottom: '1.5rem', 
-          paddingLeft: '2rem',
-          position: 'relative',
-          fontSize: '1rem',
-          lineHeight: '1.6'
-        }}>
-          <span style={{
-            position: 'absolute',
-            left: '0',
-            color: '#48bb78',
-            fontSize: '1.4rem'
-          }}>•</span>
-          What to eat based on your health profile
-        </li>
-        <li style={{ 
-          marginBottom: '1.5rem', 
-          paddingLeft: '2rem',
-          position: 'relative',
-          fontSize: '1rem',
-          lineHeight: '1.6'
-        }}>
-          <span style={{
-            position: 'absolute',
-            left: '0',
-            color: '#4299e1',
-            fontSize: '1.4rem'
-          }}>•</span>
-          When to eat – optimal timing
-        </li>
-        <li style={{ 
-          marginBottom: '1.5rem', 
-          paddingLeft: '2rem',
-          position: 'relative',
-          fontSize: '1rem',
-          lineHeight: '1.6'
-        }}>
-          <span style={{
-            position: 'absolute',
-            left: '0',
-            color: '#f6ad55',
-            fontSize: '1.4rem'
-          }}>•</span>
-          Portion control & nutrient balance
-        </li>
-        <li style={{ 
-          marginBottom: '1.5rem', 
-          paddingLeft: '2rem',
-          position: 'relative',
-          fontSize: '1rem',
-          lineHeight: '1.6'
-        }}>
-          <span style={{
-            position: 'absolute',
-            left: '0',
-            color: '#f56565',
-            fontSize: '1.4rem'
-          }}>•</span>
-          Personalized consultation sessions
-        </li>
-      </ul>
-    </div>
-
-    <div style={{
-      textAlign: 'center',
-      marginTop: '2rem'
-    }}>
-      <p style={{
-        display: 'inline-block',
-        backgroundColor: '#48bb78',
-        color: 'white',
-        padding: '1rem 2rem',
-        borderRadius: '50px',
-        fontWeight: '600',
-        fontSize: '1.1rem',
-        boxShadow: '0 4px 6px rgba(72, 187, 120, 0.2)',
-        cursor: 'pointer',
-        transition: 'transform 0.2s',
-        margin: '0 auto'
-      }}>
-        🩺 Start Your Health Journey
-      </p>
-    </div>
-  </div>
-</section>
-<section className="booking-instructions" style={{ 
-  padding: '4rem 0',
-  background: 'linear-gradient(135deg, #f3f9ff 0%, #f8f5ff 100%)'
-}}>
-  <div className="container" style={{
-    maxWidth: '1200px',
-    margin: '0 auto',
-    padding: '0 1.5rem'
-  }}>
-    <h2 style={{
-      color: '#2a4b6e',
-      fontSize: '2.3rem',
-      marginBottom: '2rem',
-      fontWeight: '700',
-      textAlign: 'center',
-      fontFamily: 'Poppins, sans-serif',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      gap: '1rem'
-    }}>
-      <FaInfoCircle style={{ color: '#4299e1' }} />
-      How to Book Your Consultation
-    </h2>
-
-    <div style={{
-      display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-      gap: '2rem',
-      marginBottom: '3rem'
-    }}>
-      {/* Step 1 */}
-      <div style={{
-        backgroundColor: 'white',
-        borderRadius: '15px',
-        padding: '2rem',
-        boxShadow: '0 5px 15px rgba(0,0,0,0.08)',
-        transition: 'transform 0.3s ease',
-        ':hover': { transform: 'translateY(-5px)' }
-      }}>
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '1rem',
-          marginBottom: '1.5rem'
-        }}>
-          <div style={{
-            backgroundColor: '#4299e1',
-            width: '40px',
-            height: '40px',
-            borderRadius: '50%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}>
-            <FaMousePointer style={{ color: 'white', fontSize: '1.2rem' }} />
-          </div>
-          <h3 style={{ margin: 0, color: '#2a4b6e', fontSize: '1.3rem' }}>Step 1: Select Service</h3>
-        </div>
-        <p style={{ color: '#4a5568', lineHeight: '1.6' }}>
-          Choose between <strong>Diet Consultation</strong> or <strong>Medical Nutrition Therapy</strong> based on your needs
-        </p>
-      </div>
-
-      {/* Step 2 */}
-      <div style={{
-        backgroundColor: 'white',
-        borderRadius: '15px',
-        padding: '2rem',
-        boxShadow: '0 5px 15px rgba(0,0,0,0.08)',
-        transition: 'transform 0.3s ease',
-        ':hover': { transform: 'translateY(-5px)' }
-      }}>
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '1rem',
-          marginBottom: '1.5rem'
-        }}>
-          <div style={{
-            backgroundColor: '#48bb78',
-            width: '40px',
-            height: '40px',
-            borderRadius: '50%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}>
-            <FaCalendarDay style={{ color: 'white', fontSize: '1.2rem' }} />
-          </div>
-          <h3 style={{ margin: 0, color: '#2a4b6e', fontSize: '1.3rem' }}>Step 2: Pick Time Slot</h3>
-        </div>
-        <p style={{ color: '#4a5568', lineHeight: '1.6' }}>
-          Select your preferred date and time from available slots (15/30/60 minute options)
-        </p>
-      </div>
-
-      {/* Step 3 */}
-      <div style={{
-        backgroundColor: 'white',
-        borderRadius: '15px',
-        padding: '2rem',
-        boxShadow: '0 5px 15px rgba(0,0,0,0.08)',
-        transition: 'transform 0.3s ease',
-        ':hover': { transform: 'translateY(-5px)' }
-      }}>
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '1rem',
-          marginBottom: '1.5rem'
-        }}>
-          <div style={{
-            backgroundColor: '#f6ad55',
-            width: '40px',
-            height: '40px',
-            borderRadius: '50%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}>
-            <FaFileSignature style={{ color: 'white', fontSize: '1.2rem' }} />
-          </div>
-          <h3 style={{ margin: 0, color: '#2a4b6e', fontSize: '1.3rem' }}>Step 3: Provide Details</h3>
-        </div>
-        <p style={{ color: '#4a5568', lineHeight: '1.6' }}>
-          Fill in your medical history and current concerns for personalized consultation
-        </p>
-      </div>
-
-      {/* Step 4 */}
-      <div style={{
-        backgroundColor: 'white',
-        borderRadius: '15px',
-        padding: '2rem',
-        boxShadow: '0 5px 15px rgba(0,0,0,0.08)',
-        transition: 'transform 0.3s ease',
-        ':hover': { transform: 'translateY(-5px)' }
-      }}>
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '1rem',
-          marginBottom: '1.5rem'
-        }}>
-          <div style={{
-            backgroundColor: '#f56565',
-            width: '40px',
-            height: '40px',
-            borderRadius: '50%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}>
-            <FaVideo style={{ color: 'white', fontSize: '1.2rem' }} />
-          </div>
-          <h3 style={{ margin: 0, color: '#2a4b6e', fontSize: '1.3rem' }}>Step 4: Join Session</h3>
-        </div>
-        <p style={{ color: '#4a5568', lineHeight: '1.6' }}>
-          Receive confirmation email with Zoom link. Test your audio/video beforehand
-        </p>
-      </div>
-    </div>
-
-
-    <section className="calendly-section" style={{ 
-      padding: '5rem 0',
-      background: 'linear-gradient(45deg, #f8fafc 0%, #f0f4ff 100%)'
-    }}>
-      <div className="container" style={{
-        maxWidth: '1200px',
-        margin: '0 auto',
-        padding: '0 1.5rem'
-      }}>
-        <h2 style={{
-          color: '#2a4b6e',
-          fontSize: '2.5rem',
-          marginBottom: '2.5rem',
-          fontWeight: '700',
-          textAlign: 'center',
-          fontFamily: 'Poppins, sans-serif',
-          textShadow: '1px 1px 2px rgba(0,0,0,0.05)'
-        }}>Book Consultation</h2>
-
-        <div style={{
-          borderRadius: '20px',
-          overflow: 'hidden',
-          boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
-          border: '3px solid #e2e8f0',
-          backgroundColor: 'white',
-          maxWidth: '900px',
+        <div className="container" style={{
+          maxWidth: '1200px',
           margin: '0 auto',
+          padding: '0 1.5rem',
           position: 'relative',
-          minHeight: '700px'
+          zIndex: 1
         }}>
-          {/* Loading Spinner */}
-          {loading && (
-            <div style={{
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              zIndex: 10
+          <h2 style={{
+            color: '#2a4b6e',
+            fontSize: '2.5rem',
+            marginBottom: '2rem',
+            fontWeight: '700',
+            textAlign: 'center',
+            fontFamily: 'Poppins, sans-serif',
+            textShadow: '1px 1px 2px rgba(0,0,0,0.05)'
+          }}>About Healthyz</h2>
+
+          <div style={{
+            backgroundColor: 'rgba(255,255,255,0.9)',
+            borderRadius: '20px',
+            padding: '2.5rem',
+            boxShadow: '0 8px 30px rgba(0,0,0,0.08)',
+            marginBottom: '2rem'
+          }}>
+            <p style={{
+              color: '#4a5568',
+              fontSize: '1.1rem',
+              lineHeight: '1.8',
+              marginBottom: '2rem',
+              fontWeight: '500'
             }}>
-              <div className="loader"></div>
-            </div>
-          )}
+              🌱 Healthyz is your guide to a better lifestyle through expert dietary planning and health consultation.<br />
+              We provide personalized diet plans based on your medical condition and help you understand:
+            </p>
 
-          {/* Calendly Iframe */}
-          <iframe
-            src="https://calendly.com/healthyz045/30min"
-            onLoad={() => setLoading(false)}
-            style={{ 
-              minWidth: '320px',
-              height: '700px',
-              width: '100%',
-              border: 'none',
-              display: 'block'
-            }}
-            title="Calendly Booking"
-          ></iframe>
+            <ul style={{
+              listStyleType: 'none',
+              paddingLeft: '0',
+              columns: '2',
+              gap: '2rem',
+              color: '#4a5568'
+            }}>
+              <li style={{
+                marginBottom: '1.5rem',
+                paddingLeft: '2rem',
+                position: 'relative',
+                fontSize: '1rem',
+                lineHeight: '1.6'
+              }}>
+                <span style={{
+                  position: 'absolute',
+                  left: '0',
+                  color: '#48bb78',
+                  fontSize: '1.4rem'
+                }}>•</span>
+                What to eat based on your health profile
+              </li>
+              <li style={{
+                marginBottom: '1.5rem',
+                paddingLeft: '2rem',
+                position: 'relative',
+                fontSize: '1rem',
+                lineHeight: '1.6'
+              }}>
+                <span style={{
+                  position: 'absolute',
+                  left: '0',
+                  color: '#4299e1',
+                  fontSize: '1.4rem'
+                }}>•</span>
+                When to eat – optimal timing
+              </li>
+              <li style={{
+                marginBottom: '1.5rem',
+                paddingLeft: '2rem',
+                position: 'relative',
+                fontSize: '1rem',
+                lineHeight: '1.6'
+              }}>
+                <span style={{
+                  position: 'absolute',
+                  left: '0',
+                  color: '#f6ad55',
+                  fontSize: '1.4rem'
+                }}>•</span>
+                Portion control & nutrient balance
+              </li>
+              <li style={{
+                marginBottom: '1.5rem',
+                paddingLeft: '2rem',
+                position: 'relative',
+                fontSize: '1rem',
+                lineHeight: '1.6'
+              }}>
+                <span style={{
+                  position: 'absolute',
+                  left: '0',
+                  color: '#f56565',
+                  fontSize: '1.4rem'
+                }}>•</span>
+                Personalized consultation sessions
+              </li>
+            </ul>
+          </div>
+
+          <div style={{
+            textAlign: 'center',
+            marginTop: '2rem'
+          }}>
+            <p style={{
+              display: 'inline-block',
+              backgroundColor: '#48bb78',
+              color: 'white',
+              padding: '1rem 2rem',
+              borderRadius: '50px',
+              fontWeight: '600',
+              fontSize: '1.1rem',
+              boxShadow: '0 4px 6px rgba(72, 187, 120, 0.2)',
+              cursor: 'pointer',
+              transition: 'transform 0.2s',
+              margin: '0 auto'
+            }}>
+              🩺 Start Your Health Journey
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
+      <section className="booking-instructions" style={{
+        padding: '4rem 0',
+        background: 'linear-gradient(135deg, #f3f9ff 0%, #f8f5ff 100%)'
+      }}>
+        <div className="container" style={{
+          maxWidth: '1200px',
+          margin: '0 auto',
+          padding: '0 1.5rem'
+        }}>
+          <h2 style={{
+            color: '#2a4b6e',
+            fontSize: '2.3rem',
+            marginBottom: '2rem',
+            fontWeight: '700',
+            textAlign: 'center',
+            fontFamily: 'Poppins, sans-serif',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '1rem'
+          }}>
+            <FaInfoCircle style={{ color: '#4299e1' }} />
+            How to Book Your Consultation
+          </h2>
 
-      {/* CSS for Spinner */}
-      <style>
-        {`
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+            gap: '2rem',
+            marginBottom: '3rem'
+          }}>
+            {/* Step 1 */}
+            <div style={{
+              backgroundColor: 'white',
+              borderRadius: '15px',
+              padding: '2rem',
+              boxShadow: '0 5px 15px rgba(0,0,0,0.08)',
+              transition: 'transform 0.3s ease',
+              ':hover': { transform: 'translateY(-5px)' }
+            }}>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '1rem',
+                marginBottom: '1.5rem'
+              }}>
+                <div style={{
+                  backgroundColor: '#4299e1',
+                  width: '40px',
+                  height: '40px',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}>
+                  <FaMousePointer style={{ color: 'white', fontSize: '1.2rem' }} />
+                </div>
+                <h3 style={{ margin: 0, color: '#2a4b6e', fontSize: '1.3rem' }}>Step 1: Select Service</h3>
+              </div>
+              <p style={{ color: '#4a5568', lineHeight: '1.6' }}>
+                Choose between <strong>Diet Consultation</strong> or <strong>Medical Nutrition Therapy</strong> based on your needs
+              </p>
+            </div>
+
+            {/* Step 2 */}
+            <div style={{
+              backgroundColor: 'white',
+              borderRadius: '15px',
+              padding: '2rem',
+              boxShadow: '0 5px 15px rgba(0,0,0,0.08)',
+              transition: 'transform 0.3s ease',
+              ':hover': { transform: 'translateY(-5px)' }
+            }}>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '1rem',
+                marginBottom: '1.5rem'
+              }}>
+                <div style={{
+                  backgroundColor: '#48bb78',
+                  width: '40px',
+                  height: '40px',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}>
+                  <FaCalendarDay style={{ color: 'white', fontSize: '1.2rem' }} />
+                </div>
+                <h3 style={{ margin: 0, color: '#2a4b6e', fontSize: '1.3rem' }}>Step 2: Pick Time Slot</h3>
+              </div>
+              <p style={{ color: '#4a5568', lineHeight: '1.6' }}>
+                Select your preferred date and time from available slots (15/30/60 minute options)
+              </p>
+            </div>
+
+            {/* Step 3 */}
+            <div style={{
+              backgroundColor: 'white',
+              borderRadius: '15px',
+              padding: '2rem',
+              boxShadow: '0 5px 15px rgba(0,0,0,0.08)',
+              transition: 'transform 0.3s ease',
+              ':hover': { transform: 'translateY(-5px)' }
+            }}>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '1rem',
+                marginBottom: '1.5rem'
+              }}>
+                <div style={{
+                  backgroundColor: '#f6ad55',
+                  width: '40px',
+                  height: '40px',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}>
+                  <FaFileSignature style={{ color: 'white', fontSize: '1.2rem' }} />
+                </div>
+                <h3 style={{ margin: 0, color: '#2a4b6e', fontSize: '1.3rem' }}>Step 3: Provide Details</h3>
+              </div>
+              <p style={{ color: '#4a5568', lineHeight: '1.6' }}>
+                Fill in your medical history and current concerns for personalized consultation
+              </p>
+            </div>
+
+            {/* Step 4 */}
+            <div style={{
+              backgroundColor: 'white',
+              borderRadius: '15px',
+              padding: '2rem',
+              boxShadow: '0 5px 15px rgba(0,0,0,0.08)',
+              transition: 'transform 0.3s ease',
+              ':hover': { transform: 'translateY(-5px)' }
+            }}>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '1rem',
+                marginBottom: '1.5rem'
+              }}>
+                <div style={{
+                  backgroundColor: '#f56565',
+                  width: '40px',
+                  height: '40px',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}>
+                  <FaVideo style={{ color: 'white', fontSize: '1.2rem' }} />
+                </div>
+                <h3 style={{ margin: 0, color: '#2a4b6e', fontSize: '1.3rem' }}>Step 4: Join Session</h3>
+              </div>
+              <p style={{ color: '#4a5568', lineHeight: '1.6' }}>
+                Receive confirmation email with Zoom link. Test your audio/video beforehand
+              </p>
+            </div>
+          </div>
+
+
+          <section className="calendly-section" style={{
+            padding: '5rem 0',
+            background: 'linear-gradient(45deg, #f8fafc 0%, #f0f4ff 100%)'
+          }}>
+            <div className="container" style={{
+              maxWidth: '1200px',
+              margin: '0 auto',
+              padding: '0 1.5rem'
+            }}>
+              <h2 style={{
+                color: '#2a4b6e',
+                fontSize: '2.5rem',
+                marginBottom: '2.5rem',
+                fontWeight: '700',
+                textAlign: 'center',
+                fontFamily: 'Poppins, sans-serif',
+                textShadow: '1px 1px 2px rgba(0,0,0,0.05)'
+              }}>Book Consultation</h2>
+
+              <div style={{
+                borderRadius: '20px',
+                overflow: 'hidden',
+                boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+                border: '3px solid #e2e8f0',
+                backgroundColor: 'white',
+                maxWidth: '900px',
+                margin: '0 auto',
+                position: 'relative',
+                minHeight: '700px'
+              }}>
+                {/* Loading Spinner */}
+                {loading && (
+                  <div style={{
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    zIndex: 10
+                  }}>
+                    <div className="loader"></div>
+                  </div>
+                )}
+
+                {/* Calendly Iframe */}
+                <iframe
+                  src="https://calendly.com/healthyz045/30min"
+                  onLoad={() => setLoading(false)}
+                  style={{
+                    minWidth: '320px',
+                    height: '700px',
+                    width: '100%',
+                    border: 'none',
+                    display: 'block'
+                  }}
+                  title="Calendly Booking"
+                ></iframe>
+              </div>
+            </div>
+
+            {/* CSS for Spinner */}
+            <style>
+              {`
           .loader {
             border: 6px solid #e2e8f0;
             border-top: 6px solid #4299e1;
@@ -429,35 +429,111 @@ const MainContactUsPage = () => {
             100% { transform: rotate(360deg); }
           }
         `}
-      </style>
-    </section>
+            </style>
+          </section>
 
 
-    <div style={{
-      backgroundColor: '#f8fafc',
-      borderRadius: '15px',
-      padding: '2rem',
-      textAlign: 'center',
-      marginTop: '2rem',
-      border: '2px solid #e2e8f0'
-    }}>
-      <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        gap: '0.5rem',
-        marginBottom: '1rem'
+          <div style={{
+            backgroundColor: '#f8fafc',
+            borderRadius: '15px',
+            padding: '2rem',
+            textAlign: 'center',
+            marginTop: '2rem',
+            border: '2px solid #e2e8f0'
+          }}>
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '0.5rem',
+              marginBottom: '1rem'
+            }}>
+              <FaPhone style={{ color: '#4299e1' }} />
+              <h3 style={{ margin: 0, color: '#2a4b6e' }}>Need Help Booking?</h3>
+            </div>
+            <p style={{ color: '#4a5568', marginBottom: '1rem' }}>
+              Call us: <strong><a href="tel:+917208422647" style={{ color: '#2a4b6e', textDecoration: 'none' }}>+91 7208422647</a></strong><br />
+              Email: <strong>healthyz045@gmail.com</strong>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Google Maps Location Section */}
+      <section style={{
+        padding: '4rem 0',
+        background: 'linear-gradient(135deg, #f0f9ff 0%, #e6fffa 100%)'
       }}>
-        <FaPhone style={{ color: '#4299e1' }} />
-        <h3 style={{ margin: 0, color: '#2a4b6e' }}>Need Help Booking?</h3>
-      </div>
-      <p style={{ color: '#4a5568', marginBottom: '1rem' }}><br />
-        Email <strong>healthyz045@gmail.com</strong>
-      </p>
-    </div>
-  </div>
-</section>
+        <div className="container" style={{
+          maxWidth: '1200px',
+          margin: '0 auto',
+          padding: '0 1.5rem'
+        }}>
+          <h2 style={{
+            color: '#2a4b6e',
+            fontSize: '2.3rem',
+            fontWeight: '700',
+            textAlign: 'center',
+            marginBottom: '0.5rem',
+            fontFamily: 'Poppins, sans-serif'
+          }}>
+            📍 Find Us
+          </h2>
+          <p style={{
+            textAlign: 'center',
+            color: '#4a5568',
+            fontSize: '1rem',
+            marginBottom: '2rem'
+          }}>
+            Dt. Gulnaaz Shaikh — Haware Intelligentia Business Park, Opp Mafco Market, Vashi
+          </p>
 
+          <div style={{
+            borderRadius: '20px',
+            overflow: 'hidden',
+            boxShadow: '0 10px 30px rgba(0,0,0,0.12)',
+            border: '3px solid #e2e8f0',
+            marginBottom: '1.5rem'
+          }}>
+            <iframe
+              title="Dt. Gulnaaz Shaikh Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8523978897!2d72.9985!3d19.0748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zRHQuIEd1bG5hYXogU2hhaWto!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin&q=Dt.+Gulnaaz+Shaikh,+Haware+Intelligentia+Business+Park,+Vashi,+Navi+Mumbai"
+              width="100%"
+              height="420"
+              style={{ border: 'none', display: 'block' }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+
+          <div style={{ textAlign: 'center' }}>
+            <a
+              href="https://share.google/6T5tUSAhqB3oyyl14"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                backgroundColor: '#013529',
+                color: 'white',
+                padding: '0.9rem 2.2rem',
+                borderRadius: '50px',
+                fontWeight: '600',
+                fontSize: '1rem',
+                textDecoration: 'none',
+                boxShadow: '0 4px 15px rgba(1, 53, 41, 0.3)',
+                transition: 'transform 0.2s ease, box-shadow 0.2s ease'
+              }}
+              onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 6px 20px rgba(1,53,41,0.4)'; }}
+              onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 4px 15px rgba(1,53,41,0.3)'; }}
+            >
+              📍 Get Directions on Google Maps
+            </a>
+          </div>
+        </div>
+      </section>
 
     </>
   );

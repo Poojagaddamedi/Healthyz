@@ -13,7 +13,6 @@ import DemoSlide from './Component/DemoSlide';
 // import Context from './CreateContext/Context';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>

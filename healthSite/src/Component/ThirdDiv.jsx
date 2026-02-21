@@ -19,11 +19,11 @@ const ThirdDiv = () => {
                             alt="Healthy Salad"
                             className="salad-img third-div-salad"
                         />
-                          <h2 className="about-title-mobile third-div-title-mobile">About Us</h2>
+                        <h2 className="about-title-mobile third-div-title-mobile">About Us</h2>
                         <div className="about-section third-div-about">
                             <h2 className="about-title third-div-title">About Us</h2>
                             <p className="about-description third-div-description">
-                            Dr. Gulnaaz Shaikh's incredible 20-year journey in nutrition and dietetics is the foundation of her brand, standing as a beacon of health and wellness. Her career has been driven by a deep passion for helping individuals achieve their health goals naturally, using food as medicine.
+                                Dr. Gulnaaz Shaikh's incredible 20-year journey in nutrition and dietetics is the foundation of her brand, standing as a beacon of health and wellness. Her career has been driven by a deep passion for helping individuals achieve their health goals naturally, using food as medicine.
                             </p>
                             <Button className="know-more-btn third-div-button">
                                 Know More
@@ -34,9 +34,10 @@ const ThirdDiv = () => {
                             style={{ top: '55%', left: '110%', transform: 'translate(-50%, -50%)' }}
                         >
                             <img
-                                src="GulnazSheikh.jpg"
+                                src="DSC_0052.JPG.jpeg"
                                 alt="Dr. Gulnaaz Shaikh"
                                 className="doctor-img third-div-doctor-img"
+                                style={{ objectPosition: 'center top' }}
                             />
                         </div>
                     </div>
