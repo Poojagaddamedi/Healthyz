@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Card } from 'react-bootstrap';
-import './FlexCard.css';
+import './Flexcard.css';
 
 const FlexCard = () => {
   useEffect(() => {
