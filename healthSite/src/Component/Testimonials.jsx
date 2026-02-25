@@ -52,6 +52,51 @@ const testimonialsData = [
     dpColor: "#1A237E",
     rating: 5,
     timeAgo: "3 months ago"
+  },
+  {
+    name: 'Khader Shareef',
+    bgColor: '#4AC6D6',
+    text: "I had an amazing consultation session with Dr. Gulnaaz Shaikh Ma'm for my family. She took the time to really listen to our concerns and provided personalized advice that felt both practical and achievable. Her knowledge and expertise were clear, but what stood out most was her ability to explain complex nutrition concepts in a way that was easy to understand. I left the session feeling motivated to make healthy changes. Thank you for your genuine care and support!",
+    initial: 'K',
+    dpColor: "#013529",
+    rating: 5,
+    timeAgo: "a year ago"
+  },
+  {
+    name: 'Bharkavi Nathan',
+    bgColor: '#66BB6A',
+    text: "I had struggle in reducing my weight as I had pcos and at the age of 33 I was trying to conceive.That's when I met this beautiful soul Dr.Gulnaz through my friend she not only helped me to reduce weight but also helped and guided me to eat healthy diet that would help me in my journey to concieve. The interesting and most important part is where she would constantly keep a check on me either by texting or calling me often to ask about my diet ,and check wuth my mental health as well.She even calls me now a days now I have a healthy baby by the grace of God and fr gulnaaz is one of the main person in this journey.thanks a lot.i concieved within 8 months.",
+    initial: 'B',
+    dpColor: "#6B28C3",
+    rating: 5,
+    timeAgo: "a year ago"
+  },
+  {
+    name: 'Jayanta Jana',
+    bgColor: '#AB47BC',
+    text: "Hi Dr. Gulnaaz Shaikh,\nJust left your clinic—already excited about the personalized plan you created. Loved how you listened to my routine (early mornings, workouts, high-protein needs) and suggested practical diet plan. Feeling motivated to start tomorrow. Thanks for the clear guidance and energy boost—can't wait for results.\nThank you.",
+    initial: 'J',
+    dpColor: "#E65100",
+    rating: 5,
+    timeAgo: "2 weeks ago"
+  },
+  {
+    name: 'Zaara Shaikh',
+    bgColor: '#26A69A',
+    text: "I’m truly grateful for the compassionate support and expert guidance I received from Dr. Gulnaaz Shaikh during my journey to conceive and throughout my pregnancy. Her personalized fertility diet greatly improved my overall health and supported my conception journey.During pregnancy, she helped me manage borderline gestational diabetes with a well-balanced, enjoyable diet plan tailored to my needs. Dr. Gulnaaz is not just a dietician but a true partner in health. I highly recommend her for fertility and pregnancy nutrition support.",
+    initial: 'Z',
+    dpColor: "#1A237E",
+    rating: 5,
+    timeAgo: "a year ago"
+  },
+  {
+    name: 'Tejal Koli',
+    bgColor: '#FF8A65',
+    text: "Hello, this is Tejal from Qatar.I had a wonderful experience following the diet plan given by Dr. Gulnaaz. The plan was practical and tailored to my needs. I started noticing positive changes in my health and energy levels within a short time. It gave excellent results for weight loss. My plan was for 6 months, but she continued to guide after the agreed time for free of charge. The guidance and follow-up were very professional and supportive, which kept me motivated throughout the journey.",
+    initial: 'T',
+    dpColor: "#013529",
+    rating: 5,
+    timeAgo: "5 months ago"
   }
 ];
 
@@ -139,7 +184,7 @@ const Testimonials = () => {
               }}
             >
               <div
-                className="p-4 h-100"
+                className="p-4 h-100 d-flex flex-column"
                 style={{
                   backgroundColor: testimonial.bgColor,
                   borderRadius: '15px',
@@ -196,7 +241,8 @@ const Testimonials = () => {
                   {testimonial.text}
                 </p>
                 <div style={{
-                  marginTop: '16px',
+                  marginTop: 'auto',
+                  paddingTop: '16px',
                   display: 'flex',
                   alignItems: 'center',
                   gap: '6px',

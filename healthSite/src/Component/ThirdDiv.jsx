@@ -1,10 +1,13 @@
 import React, { useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import './ThirdDiv.css';
 
 const ThirdDiv = () => {
+    const navigate = useNavigate();
+
     useEffect(() => {
         AOS.init({ duration: 1000 });
     }, []);
@@ -25,7 +28,7 @@ const ThirdDiv = () => {
                             <p className="about-description third-div-description">
                                 Dr. Gulnaaz Shaikh's incredible 20-year journey in nutrition and dietetics is the foundation of her brand, standing as a beacon of health and wellness. Her career has been driven by a deep passion for helping individuals achieve their health goals naturally, using food as medicine.
                             </p>
-                            <Button className="know-more-btn third-div-button">
+                            <Button className="know-more-btn third-div-button" onClick={() => navigate('/about')}>
                                 Know More
                             </Button>
                         </div>

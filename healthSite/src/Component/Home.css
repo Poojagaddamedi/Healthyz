@@ -1,11 +1,7 @@
-/* ===== Keyframes for animations (used for transitions if needed) ===== */
-/* You can extend these if you add more animations later */
-
-/* ========== Default Desktop Styles ========== */
-
 .card-container {
   position: relative;
-  width: 1330px;
+  width: 95%;
+  max-width: 1330px;
   height: 630px;
   margin: 30px auto 0 auto;
   background: #fff;
@@ -111,17 +107,19 @@
   margin-bottom: unset;
 }
 
-.headd{
+.headd {
   margin-left: 10rem;
 }
-.headd h2{
- font-size: 2rem;
- font-weight: 700;
-}
-.headd p{
+
+.headd h2 {
   font-size: 2rem;
-  font-weight:400;
- }
+  font-weight: 700;
+}
+
+.headd p {
+  font-size: 2rem;
+  font-weight: 400;
+}
 
 /* ===== Button Link Styling (Shared) ===== */
 .button-link {
@@ -141,7 +139,7 @@
   .card-container {
     width: 95%;
     height: 500px;
-    margin: 12px;
+    margin: 12px auto;
     border-radius: 8px;
     flex-direction: column-reverse;
   }
@@ -202,7 +200,7 @@
 
   .button-container {
     margin-top: 0.7rem;
-    width: 22rem;
+    width: 100%;
     margin-bottom: -1rem;
   }
 
@@ -210,15 +208,17 @@
     font-size: 16px;
   }
 
-  .headd{
+  .headd {
     margin-left: -1rem;
   }
-  .headd h2{
+
+  .headd h2 {
     margin-left: 0rem;
-   }
-  .headd p{
+  }
+
+  .headd p {
     margin-left: 1rem;
-   }
+  }
 }
 
 
@@ -231,6 +231,7 @@
       transform: translateY(100%);
       opacity: 0;
     }
+
     to {
       transform: translateY(0);
       opacity: 1;
@@ -242,6 +243,7 @@
       transform: translateY(-100%);
       opacity: 0;
     }
+
     to {
       transform: translateY(0);
       opacity: 1;
@@ -253,6 +255,7 @@
       transform: translateX(-100%);
       opacity: 0;
     }
+
     to {
       transform: translateX(0);
       opacity: 1;
@@ -264,7 +267,8 @@
 
 .card-container {
   position: relative;
-  width: 1330px;
+  width: 95%;
+  max-width: 1330px;
   height: 630px;
   margin: 30px auto 0 auto;
   background: #fff;
@@ -343,7 +347,7 @@
   border: none;
   cursor: pointer;
   animation: slideDown 4.1s ease-in-out;
-  }
+}
 
 .text-overlay h1 {
   font-size: 110px;
@@ -389,10 +393,9 @@
 /* ========== Mobile Styles ========== */
 @media (max-width: 768px) {
   .card-container {
-    margin-top: 1rem;
     width: 95%;
     height: 500px;
-    margin: 12px;
+    margin: 12px auto;
     border-radius: 8px;
     flex-direction: column-reverse;
   }
@@ -414,8 +417,9 @@
     margin-left: 0;
     position: relative;
     bottom: auto;
-     /* Add a full horizontal line at the top */
-    margin-top: 2px; /* Add 20px space above the horizontal line */
+    /* Add a full horizontal line at the top */
+    margin-top: 2px;
+    /* Add 20px space above the horizontal line */
   }
 
   .food-div.initial {
@@ -424,31 +428,37 @@
 
   .text-overlay {
     left: 4%;
-    top: 50%; /* Adjust top position as needed */
+    top: 50%;
+    /* Adjust top position as needed */
     transform: translateY(-50%);
     width: 90%;
     opacity: 1;
     pointer-events: auto;
-    transition: none; /* Remove text animation for mobile */
+    transition: none;
+    /* Remove text animation for mobile */
   }
 
-  .text-overlay h1, .text-overlay h3 {
-    animation: none; /* Disable animations for text */
-    
+  .text-overlay h1,
+  .text-overlay h3 {
+    animation: none;
+    /* Disable animations for text */
+
   }
-  .text-overlay h1
-  {
-    font-size: 65px;
+
+  .text-overlay h1 {
+    font-size: 46px;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 110px;
     text-align: left;
+    line-height: 1.1;
   }
-  .text-overlay h3
-  {
+
+  .text-overlay h3 {
     font-size: 20px;
     margin-top: -25px;
     font-family: 'Poppins', sans-serif;
   }
+
   .button-main {
     width: 80%;
     height: 48px;
@@ -458,10 +468,10 @@
 
   .button-container {
     margin-top: 1.5rem;
-    width: 25rem;
+    width: 100%;
     margin-bottom: 0.5rem;
     /* Adjust button position as needed */
-    
+
   }
 
   .button-link {
@@ -469,10 +479,6 @@
   }
 
   .button-container :hover {
-    margin-top: 1.5rem;
-    width: 25rem;
-    margin-bottom: 0.5rem;
-    /* Adjust button position as needed */
     color: black;
   }
 }
