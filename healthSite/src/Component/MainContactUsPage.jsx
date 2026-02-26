@@ -354,13 +354,11 @@ const MainContactUsPage = () => {
 
 
           <section className="calendly-section" style={{
-            padding: '5rem 0',
             background: 'linear-gradient(45deg, #f8fafc 0%, #f0f4ff 100%)'
           }}>
-            <div className="container" style={{
+            <div className="container calendly-container" style={{
               maxWidth: '1200px',
-              margin: '0 auto',
-              padding: '0 1.5rem'
+              margin: '0 auto'
             }}>
               <h2 style={{
                 color: '#2a4b6e',
@@ -372,41 +370,19 @@ const MainContactUsPage = () => {
                 textShadow: '1px 1px 2px rgba(0,0,0,0.05)'
               }}>Book Consultation</h2>
 
-              <div style={{
-                borderRadius: '20px',
-                overflow: 'hidden',
-                boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
-                border: '3px solid #e2e8f0',
-                backgroundColor: 'white',
-                maxWidth: '900px',
-                margin: '0 auto',
-                position: 'relative',
-                minHeight: '700px'
-              }}>
+              <div className="calendly-wrapper">
                 {/* Loading Spinner */}
                 {loading && (
-                  <div style={{
-                    position: 'absolute',
-                    top: '50%',
-                    left: '50%',
-                    transform: 'translate(-50%, -50%)',
-                    zIndex: 10
-                  }}>
+                  <div className="calendly-spinner-container">
                     <div className="loader"></div>
                   </div>
                 )}
 
                 {/* Calendly Iframe */}
                 <iframe
-                  src="https://calendly.com/healthyz045/30min"
+                  src="https://calendly.com/healthyz045/30min?hide_landing_page_details=1&hide_gdpr_banner=1"
                   onLoad={() => setLoading(false)}
-                  style={{
-                    minWidth: '320px',
-                    height: '700px',
-                    width: '100%',
-                    border: 'none',
-                    display: 'block'
-                  }}
+                  className="calendly-iframe"
                   title="Calendly Booking"
                 ></iframe>
               </div>

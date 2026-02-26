@@ -2,7 +2,7 @@
   width: 105%;
   height: 400px;
   object-fit: cover;
-  
+
 }
 
 .about-section {
@@ -56,7 +56,7 @@
   padding-left: -200px;
   overflow-x: 500px;
   border-radius: 20px;
- 
+
 }
 
 .doctor-label {
@@ -74,9 +74,11 @@
   text-align: center;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
 .about-title-mobile {
   display: none;
-} 
+}
+
 @media (max-width: 768px) {
   .salad-img {
     margin-top: 2rem;
@@ -85,11 +87,12 @@
     object-fit: cover;
     margin-bottom: 7rem;
   }
+
   .about-title-mobile {
     margin-top: 2rem;
     position: absolute;
-    top: -60px;                
-    left: 20%;                
+    top: -60px;
+    left: 20%;
     transform: translateX(-50%);
     font-size: 28px;
     font-weight: bold;
@@ -99,16 +102,19 @@
     z-index: 2;
     display: block;
   }
-    .about-title {
+
+  .about-title {
     display: none;
   }
+
   .doctor-container {
-    position: relative; /* Remove absolute for mobile */
+    position: relative;
+    /* Remove absolute for mobile */
     display: flex;
     justify-content: center;
     margin-top: -2rem;
     margin-bottom: 2rem;
-      margin-left: 0rem;
+    margin-left: 0rem;
   }
 
   .doctor-img {
@@ -145,6 +151,7 @@
     text-align: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
+
   .know-more-btn {
     background-color: #004d40 !important;
     border: none !important;
@@ -155,10 +162,11 @@
     transition: all 0.3s ease;
     margin-left: 6.99rem;
   }
+
   .about-description {
     font-size: 4rem;
     line-height: 1.6;
-    color : #000000;
+    color: #000000;
     margin-bottom: 25px;
     margin-top: 5rem;
     width: 25rem;
@@ -166,41 +174,44 @@
   }
 }
 
-  /* Animation Keyframes */
-  @keyframes fadeInImage {
-    0% {
-      opacity: 0;
-      transform: scale(0.95);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
+/* Animation Keyframes */
+@keyframes fadeInImage {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
   }
 
-  @keyframes slideUpAbout {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUpAbout {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
   }
 
-  @keyframes popInDoctor {
-    0% {
-      opacity: 0;
-      transform: translateY(20px) scale(0.9);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popInDoctor {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
   }
 
-  /* @keyframes pulseButton {
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* @keyframes pulseButton {
     0% {
       transform: scale(1);
     }
@@ -212,20 +223,19 @@
     }
   } */
 
-  /* Assign keyframes to elements */
-  .third-div-salad {
-    animation: fadeInImage 1s ease forwards;
-  }
+/* Assign keyframes to elements */
+.third-div-salad {
+  animation: fadeInImage 1s ease forwards;
+}
 
-  .third-div-about {
-    animation: slideUpAbout 1.2s ease forwards;
-  }
+.third-div-about {
+  animation: slideUpAbout 1.2s ease forwards;
+}
 
-  .third-div-doctor-img {
-    animation: popInDoctor 1.3s ease forwards;
-  }
+.third-div-doctor-img {
+  animation: popInDoctor 1.3s ease forwards;
+}
 
-  .third-div-button {
-    animation: pulseButton 1.5s infinite ease-in-out;
-  }
+.third-div-button {
+  animation: pulseButton 1.5s infinite ease-in-out;
 }

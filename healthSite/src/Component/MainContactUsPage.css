@@ -54,9 +54,12 @@
 }
 
 .calendly-section {
-  padding: 2rem;
+  padding: 5rem 0;
   text-align: center;
-  background-color: #ffffff;
+}
+
+.calendly-container {
+  padding: 0 1.5rem;
 }
 
 .calendly-section h2 {
@@ -64,72 +67,102 @@
   margin-bottom: 1rem;
 }
 
+/* Calendly Styles */
+.calendly-wrapper {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 3px solid #e2e8f0;
+  background-color: white;
+  max-width: 1060px;
+  margin: 0 auto;
+  position: relative;
+  height: 650px;
+}
+
+.calendly-iframe {
+  min-width: 320px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  display: block;
+}
+
+.calendly-spinner-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
 
 @media (max-width: 768px) {
-  .about-healthyz, .calendly-section {
-    padding: 2.5rem 0;
+
+  .about-healthyz,
+  .calendly-section {
+    padding: 3rem 0;
   }
-  
+
+  .calendly-container {
+    padding: 0 1rem;
+  }
+
   h2 {
-    fontSize: '1.8rem';
-    marginBottom: '1.5rem';
+    font-size: 2rem;
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
   }
-  
+
   p {
-    fontSize: '1rem';
-    padding: '0 1rem';
+    font-size: 1rem;
+    padding: 0 1rem;
   }
-  
-  .calendly-section iframe {
-    height: '600px';
+
+  ul {
+    columns: 1 !important;
+  }
+
+  .calendly-wrapper {
+    height: 750px;
+    border-radius: 12px;
+    margin: 0 auto;
+    border: 2px solid #e2e8f0;
+  }
+
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  ul {
-    paddingLeft: '1.5rem';
+  .about-content {
+    padding: 1.5rem !important;
   }
-  
+
+  ul {
+    padding-left: 1.5rem;
+  }
+
   li {
-    fontSize: '0.95rem';
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem !important;
+  }
+
+  .calendly-section {
+    padding: 2rem 0;
+  }
+
+  .calendly-container {
+    padding: 0;
+  }
+
+  .calendly-wrapper {
+    height: 1050px;
+    margin-top: 1rem;
+    border-radius: 0;
+    border: none;
+    margin: 0 auto;
+    box-shadow: none;
   }
 }
-  
-  @media (max-width: 768px) {
-    .about-healthyz, .calendly-section {
-      padding: 3rem 0;
-    }
-    
-    h2 {
-      font-size: 2rem;
-      padding: 0 1rem;
-    }
-    
-    ul {
-      columns: 1 !important;
-    }
-    
-    .calendly-section iframe {
-      height: 650px;
-    }
-    
-    .cta-button {
-      padding: 0.8rem 1.5rem;
-      font-size: 1rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .about-content {
-      padding: 1.5rem !important;
-    }
-    
-    li {
-      font-size: 0.95rem;
-      margin-bottom: 1.2rem !important;
-    }
-    
-    .calendly-section iframe {
-    margin-top: 5rem;
-    }
-  }
