@@ -28,7 +28,13 @@ const ThirdDiv = () => {
                             <p className="about-description third-div-description">
                                 Dr. Gulnaaz Shaikh's incredible 20-year journey in nutrition and dietetics is the foundation of her brand, standing as a beacon of health and wellness. Her career has been driven by a deep passion for helping individuals achieve their health goals naturally, using food as medicine.
                             </p>
-                            <Button className="know-more-btn third-div-button" onClick={() => navigate('/about')}>
+                            <Button 
+                                className="know-more-btn third-div-button" 
+                                onClick={() => {
+                                    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+                                    navigate('/about');
+                                }}
+                            >
                                 Know More
                             </Button>
                         </div>

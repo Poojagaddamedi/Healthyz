@@ -16,10 +16,10 @@ const Faq = () => {
 
   const answers = [
     "Customized diet plans are created by getting data from individual clients like 24-hour dietary recall, lifestyle, working pattern, food preferences, food allergies & medical conditions, availability, affordability, and also considering their culture & community background to achieve their health goals.",
-    "Yes, it is 100% safe. There are no side effects or any organ damage because it involves only natural functional foods & simple homemade foods without any medicines, supplements, or starvation.",
+    "Yes, our dietary approaches are formulated with high safety standards using wholesome functional foods and balanced homemade meals tailored to your individual clinical profile, without reliance on artificial supplements, unnecessary medications, or extreme starvation.",
     "We can help you with customized diet plans & dietary guidelines for all disease conditions. We also provide proper diet counseling, physical activity guidance, motivation, meal tracking, and regular follow-ups.",
     "Yes, you can consult her online with prior appointments.",
-    "The time it takes to see results varies from person to person depending on their health condition, goals, and how consistently they follow the plan. Most clients begin seeing changes within a few weeks.",
+    "The time it takes to see results varies from person to person depending on their health condition, goals, and how consistently they follow the plan. Most clients begin seeing positive changes within a few weeks.",
     "Yes, we provide regular follow-ups to make necessary adjustments to your diet plan based on your progress, preferences, and lifestyle changes.",
   ];
 

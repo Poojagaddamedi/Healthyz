@@ -1,60 +1,82 @@
 import React, { useState } from 'react';
 import { Navbar as BootstrapNavbar, Nav, Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './Navbar.css';
 
 const Navbar = () => {
   const [expanded, setExpanded] = useState(false);
+  const location = useLocation();
+
+  const navLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Services', path: '/services' },
+    { name: 'Stories', path: '/stories' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'FAQs', path: '/faqs' },
+    { name: 'Contact', path: '/contact' },
+  ];
 
   return (
     <BootstrapNavbar
-      expand={false}
+      expand="lg"
       expanded={expanded}
-      className="bg-teal-900 px-4 py-3"
+      className="healthyz-navbar"
     >
-      <Container fluid className="flex justify-between items-center">
+      <Container fluid className="d-flex justify-content-between align-items-center">
         {/* Logo */}
-        <BootstrapNavbar.Brand as={Link} to="/" className="text-xl font-bold text-black">
+        <BootstrapNavbar.Brand as={Link} to="/" onClick={() => setExpanded(false)} className="d-flex align-items-center">
           <img
             src="/logo.jpg"
-            alt="Logo"
+            alt="Healthyz Logo"
             className="d-block d-md-none"
-            style={{ height: '30px', width: 'auto', objectFit: 'contain' }}
+            style={{ height: '36px', width: 'auto', objectFit: 'contain' }}
           />
           <img
             src="/logo.jpg"
-            alt="Logo"
+            alt="Healthyz Logo"
             className="d-none d-md-block"
-            style={{ height: '60px', width: 'auto', objectFit: 'contain' }}
+            style={{ height: '52px', width: 'auto', objectFit: 'contain' }}
           />
         </BootstrapNavbar.Brand>
 
-        {/* Hamburger Icon */}
+        {/* Hamburger Icon for Mobile & Tablet only */}
         <BootstrapNavbar.Toggle
-          aria-controls="custom-navbar"
+          aria-controls="healthyz-nav-menu"
           onClick={() => setExpanded(!expanded)}
-          className="border-0 ml-auto"
+          className="healthyz-toggler ml-auto"
         />
-      </Container>
 
-      {/* Green Underline for Mobile 
-      <div className="d-block d-md-none" style={{ borderBottom: '3px solid green', margin: '1px 1rem 0 1rem' }}></div>*/}
-
-      {/* Collapsible Menu */}
-      <BootstrapNavbar.Collapse
-        id="custom-navbar"
-        className="bg-white px-4 py-3 text-center"
-      >
-        <Nav
-          className="d-flex align-items-center gap-6 flex-wrap"
-          style={{ fontSize: '1rem', fontWeight: '500' }}
+        {/* Navigation Menu */}
+        <BootstrapNavbar.Collapse
+          id="healthyz-nav-menu"
+          className="healthyz-nav-collapse justify-content-end"
         >
-          <Nav.Link as={Link} to="/" onClick={() => setExpanded(false)} className="text-black">Home</Nav.Link>
-          <Nav.Link as={Link} to="/services" onClick={() => setExpanded(false)} className="text-black">Services</Nav.Link>
-          <Nav.Link as={Link} to="/about" onClick={() => setExpanded(false)} className="text-black">About</Nav.Link>
-          <Nav.Link as={Link} to="/contact" onClick={() => setExpanded(false)} className="text-black">Contact</Nav.Link>
-        </Nav>
-      </BootstrapNavbar.Collapse>
+          <Nav className="d-flex align-items-lg-center gap-1 gap-lg-2">
+            {navLinks.map((link) => (
+              <Nav.Link
+                key={link.path}
+                as={Link}
+                to={link.path}
+                onClick={() => setExpanded(false)}
+                className={`healthyz-nav-link ${location.pathname === link.path ? 'active' : ''}`}
+              >
+                {link.name}
+              </Nav.Link>
+            ))}
+
+            {/* Quick Action CTA */}
+            <Link
+              to="/contact#appointment-form"
+              onClick={() => setExpanded(false)}
+              className="nav-book-btn"
+            >
+              Book Appointment
+            </Link>
+          </Nav>
+        </BootstrapNavbar.Collapse>
+      </Container>
     </BootstrapNavbar>
   );
 };

@@ -11,7 +11,7 @@ const FlexCard = () => {
   return (
     <>
       <div className="flex-title" style={{ marginLeft: '8%' }}>
-  <h1 className="mt-4 text-start">Why Healthyz</h1>
+  <h1 className="mt-4 text-start">Why Healthyz?</h1>
   <h2 className="mb-4 fw-normal text-start" id="secondName" style={{ fontSize: '3rem' }}>
     Know The Healthyz Difference With
   </h2>
@@ -24,12 +24,12 @@ const FlexCard = () => {
         className="text-left border-0 flex-card"
         style={{
           width: '22rem',
-          backgroundColor: 'rgba(74, 198, 214, 1)',
+          backgroundColor: '#028090',
           borderRadius: '30px'
         }}
         >
           <Card.Body className="p-5">
-            <Card.Title className="fw-bold" style={{ fontSize: '1.5rem', color: '#fff', paddingTop: '3px', textAlign: 'left' }}>Customized  Diet  Plans</Card.Title>
+            <Card.Title className="fw-bold" style={{ fontSize: '1.5rem', color: '#fff', paddingTop: '3px', textAlign: 'left' }}>Customized Diet Plans</Card.Title>
             <hr className="w-40 mx-auto my-3 p-3" style={{ borderColor: '#fff' }} />
             <Card.Text style={{ fontSize: '1rem', color: '#fff', marginTop: '-12px', textAlign: 'left' }}>
               Designed for your body, lifestyle, and goals, we offer personalized guidance for sustainable results. Achieve a healthier, happier you with expert customization.
@@ -43,7 +43,7 @@ const FlexCard = () => {
       className="text-left border-0 flex-card"
       style={{
         width: '22rem',
-        backgroundColor: 'rgba(244, 143, 177, 1)',
+        backgroundColor: '#D95388',
         borderRadius: '30px'
       }}
         >
@@ -51,7 +51,7 @@ const FlexCard = () => {
             <Card.Title className="fw-bold" style={{ fontSize: '1.5rem', color: '#fff', textAlign: 'left' }}>Natural, Side-Effect-Free Methods</Card.Title>
             <hr className="w-10 mx-auto my-3 p-2" style={{ borderColor: '#fff' }} />
             <Card.Text style={{ fontSize: '1rem', color: '#fff', textAlign: 'left' }}>
-              Discover the strength of natural, tested techniques that keep your health at top priority with no side effects. Our focus on safe, sustainable solutions nourish you for the long-term health.
+              Discover the strength of natural, tested techniques that keep your health at top priority with no side effects. Our focus on safe, sustainable solutions nourishes you for long-term health.
             </Card.Text>
           </Card.Body>
         </Card>
@@ -62,15 +62,15 @@ const FlexCard = () => {
       className="text-left border-0 flex-card"
       style={{
         width: '22rem',
-        backgroundColor: 'rgba(255, 138, 101, 1)',
+        backgroundColor: '#E65100',
         borderRadius: '30px'
       }}
         >
           <Card.Body className="p-4">
-            <Card.Title className="fw-bold" style={{ fontSize: '1.5rem', color: '#fff', textAlign: 'left' }}>100% Satisfaction Guarantee</Card.Title>
+            <Card.Title className="fw-bold" style={{ fontSize: '1.5rem', color: '#fff', textAlign: 'left' }}>Dedicated Patient Care & Support</Card.Title>
             <hr className="w-10 mx-auto my-3 p-2" style={{ borderColor: '#fff' }} />
             <Card.Text style={{ fontSize: '1rem', color: '#fff', textAlign: 'left' }}>
-              Your satisfaction is our first priority. We take utmost care and support so that your journey is both rewarding and fulfilling— attain your health goals.
+              Your wellness journey is our highest priority. We provide continuous support, empathetic guidance, and science-backed plans to help you achieve fulfilling, lasting health goals.
             </Card.Text>
           </Card.Body>
         </Card>

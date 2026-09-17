@@ -20,14 +20,14 @@ const About = () => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://assets.calendly.com/assets/external/widget.js';
-    script.async = true;
-    document.head.appendChild(script);
-
-    return () => document.head.removeChild(script);
-  }, []);
+  // Calendly script injection commented out per requirement
+  // useEffect(() => {
+  //   const script = document.createElement('script');
+  //   script.src = 'https://assets.calendly.com/assets/external/widget.js';
+  //   script.async = true;
+  //   document.head.appendChild(script);
+  //   return () => document.head.removeChild(script);
+  // }, []);
 
   const navigate = useNavigate();
 
@@ -72,7 +72,7 @@ const About = () => {
             textShadow: "2px 2px 10px rgba(0, 0, 0, 0.6)",
             marginTop: "0.5rem",
           }}>
-            Meet Dr. Gulnaz Shaikh (Founder)
+            Meet Dr. Gulnaaz Shaikh (Founder)
           </h6>
         </div>
       </div>
@@ -101,7 +101,7 @@ const About = () => {
             marginLeft: "7rem"
           }}>
             <span style={{ display: "block", textIndent: "5em", marginBottom: "0.3em" }}>
-              Dr. Gulnaz Shaikh's incredible 20-year journey in nutrition and dietetics is the foundation of her brand, standing as a beacon of health and wellness. Her career has been driven by a deep passion for helping individuals achieve their health goals naturally, using food as medicine.
+              Dr. Gulnaaz Shaikh's incredible 20-year journey in nutrition and dietetics is the foundation of her brand, standing as a beacon of health and wellness. Her career has been driven by a deep passion for helping individuals achieve their health goals naturally, using food as medicine.
             </span>
             <span style={{ display: "block", textIndent: "5em", marginBottom: "0.3em" }}>
               From managing chronic conditions like diabetes and hormonal imbalances to supporting cancer patients and guiding mothers through pregnancy and lactation, Dr. Shaikh has dedicated her life to creating customized, side-effect-free solutions for a healthier world.

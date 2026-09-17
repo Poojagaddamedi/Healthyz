@@ -156,27 +156,18 @@ const foodStyle = {
 
     <h3>– Your Partner in Health</h3>
 
-    <div
-      className="button-container"
-      // Removed AOS attributes to prevent fade animation
-      // data-aos={isMobile ? undefined : "fade-left"}
-      // data-aos-delay="300"
-      // data-aos-offset="10"
-      // data-aos-duration="2000"
-    >
+    <div className="button-container">
       <button className="button-main">
         <Link to="/services" className="button-link">
           See Services
         </Link>
       </button>
 
-      {isMobile && (
-        <button className="button-main">
-          <Link to="/contact" className="button-link">
-            Schedule a Call
-          </Link>
-        </button>
-      )}
+      <button className="button-main">
+        <Link to="/contact#appointment-form" className="button-link">
+          Book Appointment
+        </Link>
+      </button>
     </div>
   </div>
 </div>

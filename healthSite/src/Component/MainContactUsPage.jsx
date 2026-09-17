@@ -4,6 +4,8 @@ import { useForm } from "react-hook-form";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import './MainContactUsPage.css';
+import AppointmentForm from './AppointmentForm';
+import Footer from './Footer';
 
 const MainContactUsPage = () => {
   const [loading, setLoading] = useState(true);
@@ -353,6 +355,21 @@ const MainContactUsPage = () => {
           </div>
 
 
+          {/* Replaced Calendly with interactive WhatsApp Appointment Form */}
+          <section className="appointment-booking-section" style={{
+            padding: '3rem 0',
+            background: 'linear-gradient(45deg, #f8fafc 0%, #f0fdf4 100%)'
+          }}>
+            <div className="container" style={{
+              maxWidth: '1200px',
+              margin: '0 auto',
+              padding: '0 1rem'
+            }}>
+              <AppointmentForm />
+            </div>
+          </section>
+
+          {/* Calendly code commented out per requirement
           <section className="calendly-section" style={{
             background: 'linear-gradient(45deg, #f8fafc 0%, #f0f4ff 100%)'
           }}>
@@ -371,14 +388,12 @@ const MainContactUsPage = () => {
               }}>Book Consultation</h2>
 
               <div className="calendly-wrapper">
-                {/* Loading Spinner */}
                 {loading && (
                   <div className="calendly-spinner-container">
                     <div className="loader"></div>
                   </div>
                 )}
 
-                {/* Calendly Iframe */}
                 <iframe
                   src="https://calendly.com/healthyz045/30min?hide_landing_page_details=1&hide_gdpr_banner=1"
                   onLoad={() => setLoading(false)}
@@ -387,26 +402,8 @@ const MainContactUsPage = () => {
                 ></iframe>
               </div>
             </div>
-
-            {/* CSS for Spinner */}
-            <style>
-              {`
-          .loader {
-            border: 6px solid #e2e8f0;
-            border-top: 6px solid #4299e1;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
-          }
-
-          @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-          }
-        `}
-            </style>
           </section>
+          */}
 
 
           <div style={{
@@ -461,7 +458,7 @@ const MainContactUsPage = () => {
             fontSize: '1rem',
             marginBottom: '2rem'
           }}>
-            Dt. Gulnaaz Shaikh — Haware Intelligentia Business Park, Opp Mafco Market, Vashi
+            Dr. Gulnaaz Shaikh — Haware Intelligentia Business Park, Opp. Mafco Market, Sector 19, Vashi, Navi Mumbai, Maharashtra 400705
           </p>
 
           <div style={{
@@ -472,7 +469,7 @@ const MainContactUsPage = () => {
             marginBottom: '1.5rem'
           }}>
             <iframe
-              title="Dt. Gulnaaz Shaikh Location"
+              title="Dr. Gulnaaz Shaikh Location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8523978897!2d72.9985!3d19.0748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zRHQuIEd1bG5hYXogU2hhaWto!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin&q=Dt.+Gulnaaz+Shaikh,+Haware+Intelligentia+Business+Park,+Vashi,+Navi+Mumbai"
               width="100%"
               height="420"
@@ -511,6 +508,7 @@ const MainContactUsPage = () => {
         </div>
       </section>
 
+      <Footer />
     </>
   );
 };

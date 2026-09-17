@@ -13,30 +13,8 @@ const Contact = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/contact'); // 👈 Navigate to "/services"
+    navigate('/contact#appointment-form');
   };
-
-  const { openCalendly } = useContext(MainContext);
-  // useEffect(() => {
-  //   // Load Calendly script dynamically
-  //   const script = document.createElement('script');
-  //   script.src = 'https://assets.calendly.com/assets/external/widget.js';
-  //   script.async = true;
-  //   document.head.appendChild(script);
-
-  //   AOS.refresh();
-
-  //   return () => {
-  //     document.head.removeChild(script);
-  //   };
-  // }, []);
-
-  // const handleScheduleClick = (e) => {
-  //   e.preventDefault();
-  //   window.Calendly.initPopupWidget({
-  //     url: 'https://calendly.com/vinaypatel898944'
-  //   });
-  // };
 
   return (
     <div 
@@ -65,24 +43,22 @@ const Contact = () => {
       >
         <div className="text-center text-white mb-4" data-aos-delay="300">
           <h4 style={{ fontWeight: '400', marginBottom: '16px' }}>
-            Contact us
+            Contact Us
           </h4>
           <h1 style={{ fontSize: '2rem', fontWeight: '400', marginBottom: '8px' }}>
             Let’s Get In Touch
           </h1>
-          <p style={{ fontSize: '0.95rem', marginBottom: '25px',color:"white" }}>
-            Start your healthy journey today.
+          <p style={{ fontSize: '0.95rem', marginBottom: '25px', color: "white" }}>
+            Start your personalized health journey today.
           </p>
 
-          
-          
-          {/* Schedule Call Button */}
+          {/* Book Appointment Button */}
           <button 
-            className="btn btn-light px-4 py-2 "
+            className="btn btn-light px-4 py-2"
             style={{
-              color : "#013529",
+              color: "#013529",
               fontWeight: '600',
-              fontSize: '0.95rem',
+              fontSize: '1rem',
               boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
               transition: 'transform 0.3s ease'
             }}
@@ -90,7 +66,7 @@ const Contact = () => {
             onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
             onClick={handleClick}
           >
-    Schedule Call
+            Book an Appointment
           </button>
         </div>
       </div>

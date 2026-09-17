@@ -64,21 +64,30 @@
 }
 
 .button-main {
-  width: 190px;
-  height: 56px;
-  font-size: 22px;
-  margin-top: 30px;
-  padding: 0 20px;
+  width: 220px;
+  min-width: 220px;
+  height: 54px;
+  padding: 0 16px;
+  box-sizing: border-box;
   border-radius: 12px;
   z-index: 4;
   opacity: 1;
-  transition: opacity 0.8s;
+  transition: all 0.25s ease;
   pointer-events: auto;
   align-self: flex-start;
   background-color: white;
-  color: white;
   border: none;
   cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-main:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  background-color: #f7fafc;
 }
 
 .text-overlay h1 {
@@ -98,12 +107,15 @@
 }
 
 .button-container {
-  margin-top: 1.8rem;
+  margin-top: 2.2rem;
   display: flex;
-  flex-direction: column;
-  gap: 0px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 16px;
   justify-content: flex-start;
-  width: 170px;
+  align-items: center;
+  width: auto;
+  max-width: 100%;
   margin-bottom: unset;
 }
 
@@ -123,14 +135,13 @@
 
 /* ===== Button Link Styling (Shared) ===== */
 .button-link {
-  font-size: 20px;
+  font-size: 17px;
+  font-weight: 600;
   color: #013529;
-  background-color: white;
-  padding: 0.4rem;
-  border-radius: 6px;
+  background-color: transparent;
   text-decoration: none;
   display: inline-block;
-  width: 100%;
+  white-space: nowrap;
   text-align: center;
 }
 
@@ -175,37 +186,51 @@
     pointer-events: auto;
   }
 
-  .button-main {
-    width: 100%;
-    height: 48px;
-    font-size: 16px;
-    margin-top: 20px;
-  }
-
   .text-overlay h1 {
-    font-size: 42px;
-    font-weight: 450;
+    font-size: 32px;
+    font-weight: 500;
     margin: 0;
-    line-height: 1.2;
-    margin-bottom: 1.2rem;
-    margin-top: unset;
+    line-height: 1.15;
+    margin-bottom: 0.4rem;
   }
 
   .text-overlay h3 {
-    font-size: 20px;
-    margin-top: 7rem;
-    margin-bottom: 3rem;
+    font-size: 16px;
+    margin: 0 0 1rem 0;
     font-weight: 300;
   }
 
   .button-container {
-    margin-top: 0.7rem;
+    margin-top: 0.5rem;
     width: 100%;
-    margin-bottom: -1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+
+  .button-main {
+    flex: 1;
+    min-width: 0;
+    width: auto;
+    height: 42px;
+    padding: 0 8px;
+    border-radius: 8px;
+    margin-top: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
   }
 
   .button-link {
-    font-size: 16px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #013529;
+    background-color: transparent;
+    white-space: nowrap;
+    text-align: center;
   }
 
   .headd {
@@ -331,22 +356,32 @@
 }
 
 .button-main {
-  width: 190px;
-  height: 56px;
-  font-size: 22px;
-  margin-top: 30px;
-  padding: 0 20px;
+  width: 220px;
+  min-width: 220px;
+  height: 54px;
+  margin-top: 24px;
+  padding: 0 16px;
+  box-sizing: border-box;
   border-radius: 12px;
   z-index: 4;
   opacity: 1;
-  transition: opacity 1.5s;
+  transition: all 0.25s ease;
   pointer-events: auto;
   align-self: flex-start;
   background-color: white;
-  color: white;
   border: none;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
   animation: slideDown 4.1s ease-in-out;
+}
+
+.button-main:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  background-color: #f7fafc;
 }
 
 .text-overlay h1 {
@@ -373,21 +408,32 @@
   flex-direction: column;
   gap: 0px;
   justify-content: flex-start;
-  width: 130px;
+  width: auto;
   margin-bottom: unset;
 }
 
 /* ===== Button Link Styling (Shared) ===== */
 .button-link {
-  font-size: 20px;
-  color: #013529;
-  background-color: white;
-  padding: 0.4rem;
+  font-size: 17px;
+  font-weight: 600;
+  color: #013529 !important;
+  background-color: transparent;
+  padding: 0;
   border-radius: 6px;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  height: 100%;
+  white-space: nowrap;
   text-align: center;
+}
+
+.button-link:visited,
+.button-link:hover,
+.button-link:active {
+  color: #013529 !important;
 }
 
 /* ========== Mobile Styles ========== */
